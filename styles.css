@@ -406,6 +406,7 @@
   position: absolute;
   top: 400px;
   left: 30px;
+    text-decoration: none;
 }
 
 .services__card button {
@@ -638,4 +639,5 @@
 
   .maintech__content h2 {
     font-size: 2rem;
+
   }
