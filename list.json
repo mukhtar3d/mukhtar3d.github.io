@@ -1,0 +1,1441 @@
+{
+"description": "Comprehensive guide of 30 European universities accepting international students from Kazakhstan, featuring application deadlines, required documents, age limits, top majors, funding/costs in KZT, visa issues, and exam scores.",
+"target_region": "Europe",
+"universities": [
+{
+"name": "Technical University of Munich (TUM)",
+"country": "Germany",
+"city": "Munich",
+"tier": "Top",
+"accepts_international_students": true,
+"application_deadlines": {
+"winter_semester": "July 15 (for most international bachelor's programs)",
+"summer_semester": "January 15"
+},
+"required_documents": [
+"Certified high school diploma / Attestat",
+"Uni-Assist VPD (Preliminary Documentation)",
+"Proof of English proficiency (IELTS/TOEFL)",
+"Motivation letter & CV",
+"Passport copy"
+],
+"age_limitations": "No upper age limit; applicants must typically have completed secondary school (minimum 17-18 years old).",
+"majors": [
+"Mechanical Engineering (Flagship)",
+"Computer Science & Informatics (Flagship)",
+"Electrical Engineering",
+"Civil Engineering",
+"Management and Technology"
+],
+"study_costs_original": "Semester fees approx. €150-300, plus non-EU tuition fees in Bavaria approx. €4,000-€6,000 per semester for certain programs.",
+"study_costs_tenge": "Approx. 79,500 - 159,000 KZT per semester (plus €4,000-€6,000 or ~2,120,000 - 3,180,000 KZT per semester for non-EU tuition where applicable)",
+"living_costs_original": "€900 - €1,200 per month",
+"living_costs_tenge": "Approx. 477,000 - 636,000 KZT per month",
+"visa_and_funding_original": "Blocked account (Sperrkonto) required with €11,904/year (~6,309,210 KZT). Scholarships via DAAD and TUM Stipendium.",
+"visa_and_funding_tenge": "Blocked account: Approx. 6,309,210 KZT required annually. Scholarships range from partial fee waivers to monthly stipends of €300 - €930 (~159,000 - 492,900 KZT/month).",
+"common_problems": "Extremely competitive admission, high cost of living and housing shortage in Munich, bureaucratic visa appointment delays.",
+"exams": {
+"ielts": {
+"overall": 6.5,
+"listening": 6.0,
+"reading": 6.0,
+"writing": 6.0,
+"speaking": 6.0
+},
+"toefl": {
+"overall": 88
+},
+"sat": {
+"overall": "Optional/Recommended (approx 1200+)"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Aptitude assessment procedure or interview depending on the bachelor's program.",
+"required_gpa": "High (German equivalent 2.0 or better, GPA roughly 4.5/5.0 or 90%+)."
+},
+{
+"name": "Delft University of Technology (TU Delft)",
+"country": "Netherlands",
+"city": "Delft",
+"tier": "Top",
+"accepts_international_students": true,
+"application_deadlines": {
+"bachelor_numerus_fixus": "January 15",
+"general_international": "April 1 (for non-EU scholarship consideration) / July 1"
+},
+"required_documents": [
+"High school diploma with strong math/physics grades",
+"Certified grade transcripts",
+"English language test score certificate",
+"Motivation letter",
+"Copy of valid passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Aerospace Engineering (World-renowned flagship)",
+"Civil Engineering",
+"Computer Science and Engineering",
+"Architecture and the Built Environment",
+"Electrical Engineering"
+],
+"study_costs_original": "Non-EU tuition approx. €15,000 - €22,000 per year.",
+"study_costs_tenge": "Approx. 7,950,000 - 11,660,000 KZT per year.",
+"living_costs_original": "€900 - €1,300 per month",
+"living_costs_tenge": "Approx. 477,000 - 689,000 KZT per month",
+"visa_and_funding_original": "Student visa sponsored by university. Limited scholarships (Justus & Louise van Effen).",
+"visa_and_funding_tenge": "Excellence scholarships cover full tuition + living expenses (~€25,000/year or ~13,250,000 KZT). Regular living proof requires ~€12,000/year (~6,360,000 KZT).",
+"common_problems": "Severe housing crisis in the Netherlands making it very hard to find accommodation before arrival.",
+"exams": {
+"ielts": {
+"overall": 6.5,
+"listening": 6.0,
+"reading": 6.0,
+"writing": 6.0,
+"speaking": 6.0
+},
+"toefl": {
+"overall": 90,
+"listening": 22,
+"reading": 22,
+"writing": 22,
+"speaking": 22
+},
+"sat": {
+"overall": "Required for Aerospace Engineering (SAT Math score 650+)."
+},
+"act": {
+"overall": "Accepted as alternative for specific engineering tracks."
+}
+},
+"university_entrance_exams": "Faculty entrance exam / online math test for specific engineering majors.",
+"required_gpa": "High GPA, strong emphasis on Math and Physics (typically 4.5+/5.0)."
+},
+{
+"name": "University of Amsterdam (UvA)",
+"country": "Netherlands",
+"city": "Amsterdam",
+"tier": "Top",
+"accepts_international_students": true,
+"application_deadlines": {
+"numerus_fixus_programs": "January 15",
+"standard_programs": "April 1"
+},
+"required_documents": [
+"High school diploma and transcripts",
+"English language proficiency test",
+"CV / Resume",
+"Letter of Motivation / Statement of Purpose",
+"Copy of passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Media and Communications (Global top-tier)",
+"Economics and Business",
+"Psychology",
+"Politics, Psychology, Law and Economics (PPLE)",
+"Computer Science"
+],
+"study_costs_original": "Non-EU tuition approx. €10,000 - €17,000 per year.",
+"study_costs_tenge": "Approx. 5,300,000 - 9,010,000 KZT per year.",
+"living_costs_original": "€1,100 - €1,500 per month",
+"living_costs_tenge": "Approx. 583,000 - 795,000 KZT per month",
+"visa_and_funding_original": "University assists with entry visa/residence permit. Amsterdam Excellence Scholarships (AES).",
+"visa_and_funding_tenge": "AES scholarship covers full tuition and living expenses (~€25,000/year or ~13,250,000 KZT).",
+"common_problems": "Extremely difficult housing market in Amsterdam; high overall cost of living.",
+"exams": {
+"ielts": {
+"overall": 6.5,
+"listening": 6.0,
+"reading": 6.0,
+"writing": 6.0,
+"speaking": 6.0
+},
+"toefl": {
+"overall": 92,
+"listening": 22,
+"reading": 22,
+"writing": 22,
+"speaking": 22
+},
+"sat": {
+"overall": "Required for selective programs like PPE or Economics (approx 1250+)."
+},
+"act": {
+"overall": "Accepted for selective programs."
+}
+},
+"university_entrance_exams": "Decentralized selection tests or matching questionnaires for specific bachelor programs.",
+"required_gpa": "Competitive GPA, usually 4.2+/5.0."
+},
+{
+"name": "Politecnico di Milano",
+"country": "Italy",
+"city": "Milan",
+"tier": "Mid-Top",
+"accepts_international_students": true,
+"application_deadlines": {
+"first_call": "November / January",
+"second_call": "March / April"
+},
+"required_documents": [
+"High school diploma with academic transcripts",
+"English or Italian language certificate",
+"Portfolio (for Architecture/Design majors)",
+"CV and motivational statement",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Architecture (World top 10)",
+"Civil and Environmental Engineering",
+"Mechanical Engineering",
+"Management Engineering",
+"Design"
+],
+"study_costs_original": "Tuition based on family income (ISEE), max approx. €3,900 per year for non-EU students.",
+"study_costs_tenge": "Approx. 0 - 2,067,000 KZT per year (adjustable based on financial need).",
+"living_costs_original": "€850 - €1,200 per month",
+"living_costs_tenge": "Approx. 450,500 - 636,000 KZT per month",
+"visa_and_funding_original": "Universitaly pre-enrollment. DSU scholarship provides tuition waiver and living stipend up to €7,000/year.",
+"visa_and_funding_tenge": "DSU Scholarship provides complete tuition waiver + stipend of up to €7,000/year (~3,710,000 KZT/year).",
+"common_problems": "Bureaucratic delays with Italian embassy/consulate visa issuance and codice fiscale acquisition.",
+"exams": {
+"ielts": {
+"overall": 6.0,
+"listening": 5.5,
+"reading": 5.5,
+"writing": 5.5,
+"speaking": 5.5
+},
+"toefl": {
+"overall": 78
+},
+"sat": {
+"overall": "Recommended or required for engineering/architecture evaluation (score 1000+)."
+},
+"act": {
+"overall": "Accepted as alternative to SAT."
+}
+},
+"university_entrance_exams": "Polimi's English TOL (Test On Line) required if SAT is not submitted.",
+"required_gpa": "Moderate to high (approx. 3.8+/5.0)."
+},
+{
+"name": "University of Bologna",
+"country": "Italy",
+"city": "Bologna",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"early_deadlines": "January - March (varies by degree program)"
+},
+"required_documents": [
+"Secondary school diploma with transcripts",
+"Language proficiency certificate",
+"Valid passport",
+"Curriculum Vitae"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Law (Historic flagship)",
+"International Relations and Diplomatic Affairs",
+"Economics and Finance",
+"Artificial Intelligence",
+"Pharmacy"
+],
+"study_costs_original": "Tuition approx. €1,500 - €3,500 per year (adjustable via family income documentation).",
+"study_costs_tenge": "Approx. 795,000 - 1,855,000 KZT per year.",
+"living_costs_original": "€750 - €1,000 per month",
+"living_costs_tenge": "Approx. 397,500 - 530,000 KZT per month",
+"visa_and_funding_original": "Regional ER.GO scholarships available for housing and tuition waivers + stipend up to €6,500/year.",
+"visa_and_funding_tenge": "ER.GO Scholarship provides fee waivers and living stipends up to ~€6,500/year (~3,445,000 KZT).",
+"common_problems": "High competition for regional scholarships and student housing; bureaucratic hurdles.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not strictly mandatory unless specified by degree course."
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Tolc tests (Tolc-I, Tolc-E, etc.) or departmental entry tests required.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "Masaryk University",
+"country": "Czech Republic",
+"city": "Brno",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"spring_intake": "October - November",
+"autumn_intake": "February - April"
+},
+"required_documents": [
+"High school diploma (Nostrification required)",
+"Academic transcripts",
+"English language certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"General Medicine and Dentistry",
+"Applied Informatics",
+"International Relations",
+"Economics and Management",
+"Life Sciences"
+],
+"study_costs_original": "Free for Czech programs; English programs range from €2,000 to €10,000 per year.",
+"study_costs_tenge": "Approx. 1,060,000 - 5,300,000 KZT per year.",
+"living_costs_original": "€500 - €750 per month",
+"living_costs_tenge": "Approx. 265,000 - 397,500 KZT per month",
+"visa_and_funding_original": "Long-term student visa. Government scholarships and faculty merit stipends.",
+"visa_and_funding_tenge": "Merit scholarships range from €1,000 to €3,000/year (~530,000 - 1,590,000 KZT).",
+"common_problems": "Complex and lengthy Czech visa processing times (60-120 days).",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 70
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Faculty-specific entrance exams (biology/chemistry for medicine, aptitude tests for others).",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "Charles University",
+"country": "Czech Republic",
+"city": "Prague",
+"tier": "Mid-Top",
+"accepts_international_students": true,
+"application_deadlines": {
+"medical_programs": "April",
+"general_bachelors": "March - April"
+},
+"required_documents": [
+"High school graduation certificate",
+"Nostrification certificate",
+"English language score",
+"Medical health certificate"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"General Medicine (World renowned)",
+"Dentistry",
+"Economics and Finance",
+"Computer Science",
+"International Area Studies"
+],
+"study_costs_original": "Tuition for English programs ranges from €3,000 to €15,000 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 7,950,000 KZT per year.",
+"living_costs_original": "€650 - €950 per month",
+"living_costs_tenge": "Approx. 344,500 - 503,500 KZT per month",
+"visa_and_funding_original": "Czech student visa. University accommodation subsidies and academic achievement grants.",
+"visa_and_funding_tenge": "Internal grants cover partial housing or tuition discounts of up to €2,000/year (~1,060,000 KZT).",
+"common_problems": "Strict nostrification process for high school diplomas from Kazakhstan.",
+"exams": {
+"ielts": {
+"overall": 6.5
+},
+"toefl": {
+"overall": 80
+},
+"sat": {
+"overall": "Not required for general admission."
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Mandatory faculty entrance examinations (written multiple-choice tests in science/humanities).",
+"required_gpa": "Good academic standing (approx. 3.8+/5.0)."
+},
+{
+"name": "University of Warsaw",
+"country": "Poland",
+"city": "Warsaw",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"summer_intake": "May - July"
+},
+"required_documents": [
+"High school diploma with apostille",
+"Sworn translation of school certificates",
+"English language certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"International Relations",
+"Data Science and Business Analytics",
+"English Philology",
+"Management",
+"Political Science"
+],
+"study_costs_original": "Tuition for English programs ranges from €2,100 to €4,500 per year.",
+"study_costs_tenge": "Approx. 1,113,000 - 2,385,000 KZT per year.",
+"living_costs_original": "€500 - €750 per month",
+"living_costs_tenge": "Approx. 265,000 - 397,500 KZT per month",
+"visa_and_funding_original": "National Polish D-type visa. Ignacy Łukasiewicz and NAWA scholarships.",
+"visa_and_funding_tenge": "NAWA scholarships provide full tuition waivers + monthly stipends of ~PLN 1,500 (~180,000 KZT/month).",
+"common_problems": "Language barrier outside major university hubs; documentation apostille requirements.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Evaluation based on high school grades; some programs require online interviews.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "Jagiellonian University",
+"country": "Poland",
+"city": "Krakow",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"admissions_period": "May - June"
+},
+"required_documents": [
+"High school diploma with apostille",
+"English language proficiency",
+"Personal questionnaire",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Medicine (English program - flagship)",
+"European Studies",
+"International Security",
+"Theoretical Physics",
+"Management"
+],
+"study_costs_original": "Tuition ranges from €2,500 to €14,000 per year (medical is highest).",
+"study_costs_tenge": "Approx. 1,325,000 - 7,420,000 KZT per year.",
+"living_costs_original": "€450 - €700 per month",
+"living_costs_tenge": "Approx. 238,500 - 371,000 KZT per month",
+"visa_and_funding_original": "Polish student visa. NAWA scholarship opportunities.",
+"visa_and_funding_tenge": "NAWA scholarships provide monthly stipend support (~180,000 KZT/month).",
+"common_problems": "Securing visa appointment dates in Kazakhstan can be challenging in summer.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 75
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Competitive entrance tests for medical and specialized scientific tracks.",
+"required_gpa": "Moderate to good (approx. 3.6+/5.0)."
+},
+{
+"name": "University of Tartu",
+"country": "Estonia",
+"city": "Tartu",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"international_deadline": "March 15"
+},
+"required_documents": [
+"Secondary school graduation certificate and transcripts",
+"English language test scores",
+"Motivation letter",
+"Copy of passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Science (Flagship)",
+"Medicine",
+"Business Administration",
+"Law",
+"Social Sciences"
+],
+"study_costs_original": "Tuition ranges from €3,500 to €5,500 per year (many tuition waivers for top applicants).",
+"study_costs_tenge": "Approx. 1,855,000 - 2,915,000 KZT per year (free if tuition waiver is awarded).",
+"living_costs_original": "€500 - €750 per month",
+"living_costs_tenge": "Approx. 265,000 - 397,500 KZT per month",
+"visa_and_funding_original": "Temporary Residence Permit for Study in Estonia. State scholarships and tuition waivers.",
+"visa_and_funding_tenge": "State scholarships provide monthly living allowances of ~€350 (~185,500 KZT/month).",
+"common_problems": "Cold climate, strict deadlines for document translation and courier submission.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Accepted for certain bachelor programs (SAT math/reading score minimums)."
+},
+"act": {
+"overall": "Accepted as equivalent to SAT."
+}
+},
+"university_entrance_exams": "Motivation letters, online admission tests, or interviews.",
+"required_gpa": "Good (approx. 3.8+/5.0)."
+},
+{
+"name": "Tallinn University of Technology (TalTech)",
+"country": "Estonia",
+"city": "Tallinn",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"non_eu_deadline": "April 1"
+},
+"required_documents": [
+"High school diploma and transcripts",
+"Proof of English proficiency",
+"Passport copy",
+"CV"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Cyber Security (Flagship)",
+"International Business",
+"Computer and Systems Engineering",
+"Law",
+"Engineering"
+],
+"study_costs_original": "Tuition approx. €3,500 - €5,000 per year.",
+"study_costs_tenge": "Approx. 1,855,000 - 2,650,000 KZT per year.",
+"living_costs_original": "€600 - €850 per month",
+"living_costs_tenge": "Approx. 318,000 - 450,500 KZT per month",
+"visa_and_funding_original": "Estonian temporary residence permit. Stipends based on academic performance.",
+"visa_and_funding_tenge": "Performance-based stipends range from €100 to €300/month (~53,000 - 159,000 KZT/month).",
+"common_problems": "Housing availability in Tallinn can be tight in August/September.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 70
+},
+"sat": {
+"overall": "Optional, can replace entrance math tests if score is high enough."
+},
+"act": {
+"overall": "Optional"
+}
+},
+"university_entrance_exams": "Online entrance exams in mathematics or program-specific subjects.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "Vilnius University",
+"country": "Lithuania",
+"city": "Vilnius",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"admission_deadline": "June 1 - July 1"
+},
+"required_documents": [
+"High school certificate with transcripts",
+"English language certificate",
+"Motivation letter",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Software Engineering (Flagship)",
+"Medicine",
+"International Business",
+"English Philology",
+"Biochemistry"
+],
+"study_costs_original": "Tuition ranges from €2,500 to €10,000 per year (Medicine up to €10,000).",
+"study_costs_tenge": "Approx. 1,325,000 - 5,300,000 KZT per year.",
+"living_costs_original": "€500 - €750 per month",
+"living_costs_tenge": "Approx. 265,000 - 397,500 KZT per month",
+"visa_and_funding_original": "National visa (D) and temporary residence permit. State scholarships for non-EU students.",
+"visa_and_funding_tenge": "Lithuanian state scholarships provide monthly stipends of ~€200-€300 (~106,000 - 159,000 KZT/month).",
+"common_problems": "Immigration formalities and verification of foreign educational documents.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Motivation letter and online interview or subject test.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "Kaunas University of Technology (KTU)",
+"country": "Lithuania",
+"city": "Kaunas",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July 1"
+},
+"required_documents": [
+"High school diploma and transcripts",
+"English certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Mechanical Engineering",
+"Software Systems",
+"Chemical Technology",
+"Business and Entrepreneurship"
+],
+"study_costs_original": "Tuition ranges from €3,000 to €4,500 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 2,385,000 KZT per year.",
+"living_costs_original": "€400 - €600 per month",
+"living_costs_tenge": "Approx. 212,000 - 318,000 KZT per month",
+"visa_and_funding_original": "Lithuanian student visa. Early bird discounts and partial tuition waivers.",
+"visa_and_funding_tenge": "Partial fee waivers reduce tuition by 20-50%.",
+"common_problems": "Limited part-time job opportunities in Kaunas compared to major Western capitals.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 65
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Motivational interview and entrance test in mathematics for engineering.",
+"required_gpa": "Lower to moderate (approx. 3.0+/5.0)."
+},
+{
+"name": "University of Latvia",
+"country": "Latvia",
+"city": "Riga",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"international_deadline": "July 1"
+},
+"required_documents": [
+"High school diploma and transcripts",
+"English proficiency score",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Science",
+"Medicine",
+"Optometry",
+"Business Administration"
+],
+"study_costs_original": "Tuition ranges from €2,500 to €5,000 per year.",
+"study_costs_tenge": "Approx. 1,325,000 - 2,650,000 KZT per year.",
+"living_costs_original": "€450 - €700 per month",
+"living_costs_tenge": "Approx. 238,500 - 371,000 KZT per month",
+"visa_and_funding_original": "Latvian residence permit. Latvian state scholarships available (~€500/month).",
+"visa_and_funding_tenge": "Latvian state scholarships provide ~€500/month (~265,000 KZT/month).",
+"common_problems": "Strict embassy visa requirements regarding proof of financial subsistence.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 70
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Entrance interview or portfolio review for specialized programs.",
+"required_gpa": "Moderate (approx. 3.3+/5.0)."
+},
+{
+"name": "Riga Technical University (RTU)",
+"country": "Latvia",
+"city": "Riga",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July 1"
+},
+"required_documents": [
+"High school graduation certificate",
+"Transcripts with good math grades",
+"English certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Civil Engineering",
+"Computer Systems",
+"Logistics and Supply Chain Management",
+"Aviation Technology"
+],
+"study_costs_original": "Tuition ranges from €3,200 to €4,500 per year.",
+"study_costs_tenge": "Approx. 1,696,000 - 2,385,000 KZT per year.",
+"living_costs_original": "€450 - €700 per month",
+"living_costs_tenge": "Approx. 238,500 - 371,000 KZT per month",
+"visa_and_funding_original": "Student visa and residence permit. Tuition fee discounts for high academic performers.",
+"visa_and_funding_tenge": "Tuition discounts up to 20-50% based on semester grades.",
+"common_problems": "Bureaucratic delays at the Office of Citizenship and Migration Affairs in Latvia.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Online math test or interview for technical programs.",
+"required_gpa": "Moderate (approx. 3.4+/5.0)."
+},
+{
+"name": "University of Maribor",
+"country": "Slovenia",
+"city": "Maribor",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "August 31"
+},
+"required_documents": [
+"Secondary school certificate with apostille",
+"Transcripts",
+"English language certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Electrical Engineering",
+"Mechanical Engineering",
+"Media Communications",
+"Business and Economics"
+],
+"study_costs_original": "Tuition for non-EU students ranges from €2,500 to €5,000 per year.",
+"study_costs_tenge": "Approx. 1,325,000 - 2,650,000 KZT per year.",
+"living_costs_original": "€500 - €700 per month",
+"living_costs_tenge": "Approx. 265,000 - 371,000 KZT per month",
+"visa_and_funding_original": "Slovenian residence permit. Subsidized student meals (Šaruni) and student work permits (Študentski servis).",
+"visa_and_funding_tenge": "Subsidized student work permits allow part-time earnings up to €600-€900/month (~318,000 - 477,000 KZT/month).",
+"common_problems": "Language barrier in smaller towns; limited English undergraduate majors.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 70
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Recognition of secondary education certificate; specific faculty tests if applicable.",
+"required_gpa": "Moderate (approx. 3.3+/5.0)."
+},
+{
+"name": "University of Ljubljana",
+"country": "Slovenia",
+"city": "Ljubljana",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July 1"
+},
+"required_documents": [
+"High school diploma with recognition",
+"Transcripts",
+"English language proficiency",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer and Information Science (Flagship)",
+"Economics",
+"Pharmacy",
+"Public Administration"
+],
+"study_costs_original": "Tuition for non-EU students approx. €3,000 to €7,500 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 3,975,000 KZT per year.",
+"living_costs_original": "€650 - €900 per month",
+"living_costs_tenge": "Approx. 344,500 - 477,000 KZT per month",
+"visa_and_funding_original": "Slovenian student visa/permit. Local scholarship schemes.",
+"visa_and_funding_tenge": "Government and municipal scholarships range from €200 to €400/month (~106,000 - 212,000 KZT/month).",
+"common_problems": "High demand for student housing in Ljubljana; competitive enrollment quotas.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 80
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Talent tests or specific subject exams for selective programs.",
+"required_gpa": "Good (approx. 3.7+/5.0)."
+},
+{
+"name": "Matej Bel University",
+"country": "Slovakia",
+"city": "Banská Bystrica",
+"tier": "Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "May 31"
+},
+"required_documents": [
+"High school certificate",
+"Transcripts",
+"English certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"International Relations",
+"Economics and Management",
+"Political Science"
+],
+"study_costs_original": "Tuition for English programs approx. €1,500 - €3,000 per year.",
+"study_costs_tenge": "Approx. 795,000 - 1,590,000 KZT per year.",
+"living_costs_original": "€400 - €600 per month",
+"living_costs_tenge": "Approx. 212,000 - 318,000 KZT per month",
+"visa_and_funding_original": "Slovak student residence permit. National scholarship program of the Slovak Republic.",
+"visa_and_funding_tenge": "National scholarship program offers monthly living grants of ~€400 (~212,000 KZT/month).",
+"common_problems": "Lower international recognition; strict document legalization.",
+"exams": {
+"ielts": {
+"overall": 5.0
+},
+"toefl": {
+"overall": 60
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Simple motivation letter or online interview.",
+"required_gpa": "Basic (approx. 3.0+/5.0)."
+},
+{
+"name": "Comenius University Bratislava",
+"country": "Slovakia",
+"city": "Bratislava",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"medical_programs": "May",
+"other_programs": "March - June"
+},
+"required_documents": [
+"High school diploma with apostille",
+"Transcripts",
+"English language certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"General Medicine (Flagship)",
+"Dentistry",
+"Law",
+"Management",
+"Pharmacy"
+],
+"study_costs_original": "Tuition for English programs ranges from €3,000 to €12,000 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 6,360,000 KZT per year.",
+"living_costs_original": "€500 - €750 per month",
+"living_costs_tenge": "Approx. 265,000 - 397,500 KZT per month",
+"visa_and_funding_original": "Slovak residence permit. Stipends for academic excellence.",
+"visa_and_funding_tenge": "Excellence stipends reward top students with €500 - €1,500 per year (~265,000 - 795,000 KZT).",
+"common_problems": "Bureaucratic visa extension process every year.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 75
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Entrance exams for Medicine and Law (biology/chemistry or logical reasoning tests).",
+"required_gpa": "Moderate to good (approx. 3.6+/5.0)."
+},
+{
+"name": "University of Debrecen",
+"country": "Hungary",
+"city": "Debrecen",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"stipendium_hungaricum": "January 15",
+"self_funded": "June 15"
+},
+"required_documents": [
+"High school leaving certificate",
+"Academic transcripts",
+"Medical certificate of health",
+"English proficiency test score",
+"Motivation letter"
+],
+"age_limitations": "Must be at least 18 years old by August 31 of the application year for Stipendium Hungaricum.",
+"majors": [
+"General Medicine (Globally renowned flagship)",
+"Dentistry",
+"Pharmacy",
+"Mechanical Engineering",
+"Business Informatics"
+],
+"study_costs_original": "Tuition ranges from €5,500 to €17,000 per year (Medicine is highest).",
+"study_costs_tenge": "Approx. 2,915,000 - 9,010,000 KZT per year (Fully covered if awarded Stipendium Hungaricum).",
+"living_costs_original": "€450 - €650 per month",
+"living_costs_tenge": "Approx. 238,500 - 344,500 KZT per month",
+"visa_and_funding_original": "Hungarian student visa. Stipendium Hungaricum scholarship covers full tuition, monthly stipend (~HUF 43,750 / ~55,000 KZT), and free dorm.",
+"visa_and_funding_tenge": "Stipendium Hungaricum provides 100% tuition waiver, free dormitory housing, and monthly stipend (~55,000 KZT/month + medical insurance).",
+"common_problems": "Extremely high competition for Stipendium Hungaricum Kazakhstan quota spots; mandatory medical checks.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 66
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Written and oral entrance examinations in biology, chemistry, and physics (for medical programs).",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "University of Szeged",
+"country": "Hungary",
+"city": "Szeged",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"stipendium_hungaricum": "January 15",
+"self_funded": "July 1"
+},
+"required_documents": [
+"High school diploma",
+"Transcripts",
+"English certificate",
+"Medical health certificate",
+"Motivation letter"
+],
+"age_limitations": "Must be 18+ for Stipendium Hungaricum.",
+"majors": [
+"Medicine and Surgery (Flagship)",
+"Molecular Biology",
+"Computer Science",
+"International Relations",
+"English and American Studies"
+],
+"study_costs_original": "Tuition ranges from €4,000 to €15,000 per year.",
+"study_costs_tenge": "Approx. 2,120,000 - 7,950,000 KZT per year.",
+"living_costs_original": "€450 - €650 per month",
+"living_costs_tenge": "Approx. 238,500 - 344,500 KZT per month",
+"visa_and_funding_original": "Stipendium Hungaricum and Visegrad Fund scholarships available.",
+"visa_and_funding_tenge": "Stipendium Hungaricum covers tuition, housing, and monthly stipend (~55,000 KZT).",
+"common_problems": "Strict attendance policies in medical and science departments.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "University's own entrance test in sciences/English for medical applicants.",
+"required_gpa": "Moderate to good (approx. 3.6+/5.0)."
+},
+{
+"name": "Eötvös Loránd University (ELTE)",
+"country": "Hungary",
+"city": "Budapest",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"stipendium_hungaricum": "January 15",
+"self_funded": "June 30"
+},
+"required_documents": [
+"High school graduation diploma",
+"Transcripts",
+"English proficiency score",
+"CV and motivational letter"
+],
+"age_limitations": "Must be 18+ for Stipendium Hungaricum.",
+"majors": [
+"Computer Science (Flagship)",
+"Psychology",
+"International Relations",
+"Finance",
+"Physics"
+],
+"study_costs_original": "Tuition ranges from €2,500 to €6,000 per year.",
+"study_costs_tenge": "Approx. 1,325,000 - 3,180,000 KZT per year.",
+"living_costs_original": "€550 - €800 per month",
+"living_costs_tenge": "Approx. 291,500 - 424,000 KZT per month",
+"visa_and_funding_original": "Hungarian residence permit. Stipendium Hungaricum partner university.",
+"visa_and_funding_tenge": "Stipendium Hungaricum covers full tuition, dorm, and stipend (~55,000 KZT/month).",
+"common_problems": "Finding affordable private accommodation in Budapest if dorms are full.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Online entrance interview and written test depending on the faculty.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "University of Zagreb",
+"country": "Croatia",
+"city": "Zagreb",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July 15"
+},
+"required_documents": [
+"High school diploma with apostille",
+"Transcripts",
+"English language certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Medicine (English program)",
+"Electrical Engineering and Computing",
+"Business",
+"Architecture"
+],
+"study_costs_original": "Tuition for international programs ranges from €3,000 to €8,000 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 4,240,000 KZT per year.",
+"living_costs_original": "€500 - €700 per month",
+"living_costs_tenge": "Approx. 265,000 - 371,000 KZT per month",
+"visa_and_funding_original": "Croatian temporary stay permit for study. Limited national scholarships.",
+"visa_and_funding_tenge": "Limited government grants up to €2,000/year (~1,060,000 KZT).",
+"common_problems": "Complex document legalization and notarization requirements for non-EU students.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 72
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Class entrance tests for medicine, veterinary, and arts.",
+"required_gpa": "Moderate (approx. 3.3+/5.0)."
+},
+{
+"name": "Aristotle University of Thessaloniki",
+"country": "Greece",
+"city": "Thessaloniki",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July"
+},
+"required_documents": [
+"High school leaving certificate with Greek Embassy legalization / Apostille",
+"Grade transcripts",
+"English certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Medicine",
+"Mechanical Engineering",
+"Electrical and Computer Engineering",
+"English Language and Literature"
+],
+"study_costs_original": "Tuition is free for many standard programs even for non-EU students in Greek; English master's charge ~€1,500-€4,000.",
+"study_costs_tenge": "Free for standard undergraduate programs (approx. 0 KZT tuition); English graduate programs up to ~2,120,000 KZT/year.",
+"living_costs_original": "€450 - €650 per month",
+"living_costs_tenge": "Approx. 238,500 - 344,500 KZT per month",
+"visa_and_funding_original": "Greek student visa (Type D). Greek government scholarships for foreign nationals.",
+"visa_and_funding_tenge": "Government scholarships provide monthly stipends of ~€450 (~238,500 KZT/month).",
+"common_problems": "Bureaucratic hurdles with Greek public offices; learning Greek might be required for daily integration.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 78
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "University admission evaluation based on high school leaving certificates and equivalency.",
+"required_gpa": "Moderate (approx. 3.5+/5.0)."
+},
+{
+"name": "University of Bucharest",
+"country": "Romania",
+"city": "Bucharest",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "July 31"
+},
+"required_documents": [
+"High school diploma with apostille",
+"Letter of Acceptance from Romanian Ministry of Education",
+"English proficiency certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Science",
+"Business Administration",
+"Philology",
+"Law"
+],
+"study_costs_original": "Tuition ranges from €2,000 to €5,000 per year.",
+"study_costs_tenge": "Approx. 1,060,000 - 2,650,000 KZT per year.",
+"living_costs_original": "€400 - €600 per month",
+"living_costs_tenge": "Approx. 212,000 - 318,000 KZT per month",
+"visa_and_funding_original": "Romanian long-stay visa for studies. Romanian state scholarships offered via Ministry of Foreign Affairs.",
+"visa_and_funding_tenge": "State scholarships cover tuition and monthly living stipend (~€150-€200 or ~79,500 - 106,000 KZT/month).",
+"common_problems": "Visa issuance can take considerable time; obtaining Ministry acceptance letter can be delayed.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 65
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Letter of acceptance evaluation based on school grades; interview for specific programs.",
+"required_gpa": "Basic to moderate (approx. 3.0+/5.0)."
+},
+{
+"name": "Sofia University St. Kliment Ohridski",
+"country": "Bulgaria",
+"city": "Sofia",
+"tier": "Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "September 1"
+},
+"required_documents": [
+"High school diploma with apostille",
+"Medical certificate",
+"English proficiency proof",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Science",
+"Business Administration",
+"European Studies",
+"Philology"
+],
+"study_costs_original": "Tuition ranges from €3,000 to €5,500 per year.",
+"study_costs_tenge": "Approx. 1,590,000 - 2,915,000 KZT per year.",
+"living_costs_original": "€350 - €550 per month",
+"living_costs_tenge": "Approx. 185,500 - 291,500 KZT per month",
+"visa_and_funding_original": "Bulgarian D-visa and residence permit.",
+"visa_and_funding_tenge": "Affordable living costs; limited internal merit grants.",
+"common_problems": "Administrative delays in immigration service and university paperwork.",
+"exams": {
+"ielts": {
+"overall": 5.0
+},
+"toefl": {
+"overall": 60
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "High school grade verification and subject interview.",
+"required_gpa": "Basic (approx. 3.0+/5.0)."
+},
+{
+"name": "Cyprus University of Technology",
+"country": "Cyprus",
+"city": "Limassol",
+"tier": "Mid-Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "June 30"
+},
+"required_documents": [
+"High school graduation certificate",
+"Transcripts",
+"English certificate",
+"Police clearance certificate",
+"Passport"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Engineering and Informatics",
+"Multimedia and Graphic Arts",
+"Hotel and Tourism Management",
+"Commerce and Finance"
+],
+"study_costs_original": "Tuition ranges from €3,400 to €8,000 per year.",
+"study_costs_tenge": "Approx. 1,802,000 - 4,240,000 KZT per year.",
+"living_costs_original": "€600 - €900 per month",
+"living_costs_tenge": "Approx. 318,000 - 477,000 KZT per month",
+"visa_and_funding_original": "Cyprus student entry permit and visa. University grants and partial fee reductions.",
+"visa_and_funding_tenge": "Partial fee reductions up to 20-30% based on academic standing.",
+"common_problems": "Strict immigration rules regarding bank guarantees and health checks in Cyprus.",
+"exams": {
+"ielts": {
+"overall": 5.5
+},
+"toefl": {
+"overall": 70
+},
+"sat": {
+"overall": "Not required"
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Internal English placement test or interview if certificates are borderline.",
+"required_gpa": "Moderate (approx. 3.2+/5.0)."
+},
+{
+"name": "University of Cyprus",
+"country": "Cyprus",
+"city": "Nicosia",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "May 15"
+},
+"required_documents": [
+"High school diploma",
+"Transcripts",
+"English or Greek language certificate",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Computer Science",
+"Business Administration",
+"Architecture",
+"English Studies"
+],
+"study_costs_original": "Tuition for non-EU students approx. €3,400 to €6,800 per year.",
+"study_costs_tenge": "Approx. 1,802,000 - 3,604,000 KZT per year.",
+"living_costs_original": "€550 - €800 per month",
+"living_costs_tenge": "Approx. 291,500 - 424,000 KZT per month",
+"visa_and_funding_original": "Migration Department student visa. Merit-based tuition waivers.",
+"visa_and_funding_tenge": "Merit-based tuition waivers of up to 50% for top academic students.",
+"common_problems": "Hot summer climate, limited public transport outside central Nicosia.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 75
+},
+"sat": {
+"overall": "Accepted/encouraged for international admissions track."
+},
+"act": {
+"overall": "Accepted"
+}
+},
+"university_entrance_exams": "Special international student exams or interview set by departments.",
+"required_gpa": "Good (approx. 3.6+/5.0)."
+},
+{
+"name": "Kadir Has University",
+"country": "Turkey",
+"city": "Istanbul",
+"tier": "Mid",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "August 15"
+},
+"required_documents": [
+"High school diploma",
+"Transcripts",
+"English proficiency score (IELTS/TOEFL/university test)",
+"Passport copy",
+"Recommendation letter"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Mechatronics Engineering (Flagship)",
+"Computer Engineering",
+"International Relations",
+"Architecture",
+"Business Administration"
+],
+"study_costs_original": "Tuition ranges from $6,000 to $10,000 USD per year.",
+"study_costs_tenge": "Approx. 2,940,000 - 4,900,000 KZT per year (private university).",
+"living_costs_original": "€450 - €700 per month",
+"living_costs_tenge": "Approx. 238,500 - 371,000 KZT per month",
+"visa_and_funding_original": "Turkish student residence permit. Institutional scholarships (up to 50%-100% tuition waivers for high-scoring applicants).",
+"visa_and_funding_tenge": "Merit scholarships cover 50% to 100% of tuition based on SAT/GPA scores.",
+"common_problems": "Fluctuating inflation rates in Turkey affecting daily living expenses.",
+"exams": {
+"ielts": {
+"overall": 6.0
+},
+"toefl": {
+"overall": 78
+},
+"sat": {
+"overall": "Accepted and rewarded (SAT total score 1100+ helps secure scholarships)."
+},
+"act": {
+"overall": "Accepted"
+}
+},
+"university_entrance_exams": "University's own English proficiency exam (if IELTS/TOEFL not submitted).",
+"required_gpa": "Moderate to good (approx. 3.5+/5.0)."
+},
+{
+"name": "Altinbas University",
+"country": "Turkey",
+"city": "Istanbul",
+"tier": "Lower",
+"accepts_international_students": true,
+"application_deadlines": {
+"application_deadline": "September 1"
+},
+"required_documents": [
+"High school diploma",
+"Transcripts",
+"Passport copy"
+],
+"age_limitations": "No age limit.",
+"majors": [
+"Medicine and Dentistry",
+"Computer Engineering",
+"Business Administration",
+"International Trade"
+],
+"study_costs_original": "Tuition ranges from $4,000 to $8,000 USD per year.",
+"study_costs_tenge": "Approx. 1,960,000 - 3,920,000 KZT per year.",
+"living_costs_original": "€450 - €700 per month",
+"living_costs_tenge": "Approx. 238,500 - 371,000 KZT per month",
+"visa_and_funding_original": "Student residence permit. Broad scholarship tiers for CIS/Kazakh students based on GPA.",
+"visa_and_funding_tenge": "GPA-based tuition discounts ranging from 25% to 75%.",
+"common_problems": "Heavy traffic in Istanbul, adapting to a very large and fast-paced metropolis.",
+"exams": {
+"ielts": {
+"overall": 5.0
+},
+"toefl": {
+"overall": 60
+},
+"sat": {
+"overall": "Not strictly required (admissions can rely entirely on high school GPA)."
+},
+"act": {
+"overall": "Not required"
+}
+},
+"university_entrance_exams": "Internal English language preparatory placement test if no certificate is provided.",
+"required_gpa": "Basic (approx. 3.0+/5.0)."
+}
+]
+}
