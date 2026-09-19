@@ -1,0 +1,337 @@
+"""Builds backend/api/data/seed_universities.json.
+
+These figures are approximate demo data gathered to make the app runnable before
+the real database arrives. They are marked `data_source: "seed"` in the model and
+the UI labels them as such. Replace them with:
+
+    python manage.py import_universities --path <the real file> --truncate
+"""
+
+import json
+from pathlib import Path
+
+ENG = "English"
+ENG_LOCAL = "English and local language"
+
+# Shared programme sets, mixed per university below.
+TECH = ["Computer Science", "Electrical Engineering", "Mechanical Engineering", "Data Science", "Applied Mathematics", "Artificial Intelligence"]
+BIZ = ["Business Administration", "Economics", "Finance", "International Management", "Marketing"]
+GEN = ["Law", "Psychology", "Political Science", "History", "Philosophy", "Linguistics"]
+LIFE = ["Biology", "Biomedical Sciences", "Medicine", "Chemistry", "Environmental Science"]
+DESIGN = ["Architecture", "Industrial Design", "Urban Planning", "Media Studies"]
+
+# name, city, country, rank, accept, tuition, living, housing, ielts, sat, sat_req,
+# gpa, language, majors, deadline, lat, lng, scholarship, description
+ROWS = [
+    ("Delft University of Technology", "Delft", "Netherlands", 47, 0.35, 20000, 7200, 5400, 6.5, 1250, False, 3.3, ENG,
+     TECH + DESIGN, "15 January", 52.0022, 4.3736,
+     "Justus & Louise van Effen scholarship covers tuition plus €16,000 for outstanding non-EU applicants.",
+     "The Netherlands' oldest technical university, strongest in aerospace, civil and industrial design."),
+    ("University of Amsterdam", "Amsterdam", "Netherlands", 55, 0.42, 13500, 9600, 6600, 6.5, None, False, 3.2, ENG,
+     BIZ + GEN + ["Communication Science", "Data Science"], "1 February", 52.3638, 4.8880,
+     "Amsterdam Merit Scholarship: €5,000–€25,000 for non-EEA students.",
+     "A large research university spread through the city centre, with a wide English-taught bachelor catalogue."),
+    ("Erasmus University Rotterdam", "Rotterdam", "Netherlands", 99, 0.45, 12500, 8400, 5800, 6.5, None, False, 3.1, ENG,
+     BIZ + ["Econometrics", "Health Economics", "Public Administration"], "15 January", 51.9175, 4.5270,
+     "Erasmus Trustfonds scholarships and the Holland Scholarship (€5,000, first year).",
+     "Business and economics powerhouse, with the Rotterdam School of Management at its centre."),
+    ("Eindhoven University of Technology", "Eindhoven", "Netherlands", 124, 0.55, 17000, 7000, 5200, 6.5, None, False, 3.0, ENG,
+     TECH + ["Biomedical Engineering", "Industrial Engineering"], "1 May", 51.4478, 5.4866,
+     "TU/e Bachelor Scholarship covers part of tuition for non-EEA students.",
+     "Engineering-only campus embedded in the Brainport tech region, very close to industry."),
+    ("University of Groningen", "Groningen", "Netherlands", 139, 0.58, 12000, 7800, 4800, 6.5, None, False, 2.9, ENG,
+     GEN + LIFE + ["International Business", "Artificial Intelligence"], "1 May", 53.2194, 6.5665,
+     "Holland Scholarship €5,000 and the Groningen Talent Grant.",
+     "A classic Dutch university town where students are a third of the population."),
+    ("Maastricht University", "Maastricht", "Netherlands", 168, 0.60, 14000, 8200, 5200, 6.5, None, False, 3.0, ENG,
+     BIZ + GEN + ["European Studies", "International Business"], "1 May", 50.8484, 5.6889,
+     "UM Holland-High Potential Scholarship covers tuition, insurance and living costs.",
+     "Problem-based learning in small groups; the most internationally mixed campus in the country."),
+
+    ("Technical University of Munich", "Munich", "Germany", 28, 0.30, 300, 11400, 7800, 6.5, None, False, 3.4, ENG_LOCAL,
+     TECH + LIFE + ["Aerospace Engineering", "Robotics"], "31 May", 48.1497, 11.5679,
+     "Deutschlandstipendium €300/month; no tuition beyond the semester fee.",
+     "Germany's top-ranked technical university. Semester fee only, but Munich is expensive to live in."),
+    ("Ludwig Maximilian University of Munich", "Munich", "Germany", 59, 0.35, 300, 11400, 7800, 6.5, None, False, 3.3, ENG_LOCAL,
+     GEN + LIFE + ["Economics", "Physics"], "15 July", 48.1508, 11.5802,
+     "Deutschlandstipendium and DAAD scholarships for international students.",
+     "One of Europe's oldest universities; most bachelor teaching is in German, masters often in English."),
+    ("Heidelberg University", "Heidelberg", "Germany", 87, 0.40, 3000, 9600, 5400, 6.5, None, False, 3.2, ENG_LOCAL,
+     LIFE + GEN + ["Molecular Biotechnology"], "15 July", 49.4104, 8.7070,
+     "Baden-Württemberg charges €1,500/semester for non-EU students; DAAD grants can offset it.",
+     "Germany's oldest university, with real strength in medicine and the life sciences."),
+    ("RWTH Aachen University", "Aachen", "Germany", 106, 0.50, 300, 9000, 4800, 6.5, None, False, 3.0, ENG_LOCAL,
+     TECH + ["Automotive Engineering", "Materials Science"], "15 July", 50.7783, 6.0608,
+     "No tuition; Deutschlandstipendium available on merit.",
+     "The largest engineering faculty in Germany, with deep ties to the automotive industry."),
+    ("Technical University of Berlin", "Berlin", "Germany", 154, 0.45, 300, 10200, 6600, 6.5, None, False, 3.0, ENG_LOCAL,
+     TECH + DESIGN, "15 July", 52.5125, 13.3269,
+     "No tuition fees; Berlin has a well-developed student housing network.",
+     "Technical university in the middle of Berlin, strong in computing and urban systems."),
+
+    ("Sorbonne University", "Paris", "France", 59, 0.40, 2770, 12600, 7800, 6.5, None, False, 3.2, ENG_LOCAL,
+     GEN + LIFE + ["Mathematics", "Computer Science"], "15 March", 48.8462, 2.3448,
+     "Non-EU differentiated fees can be waived; Eiffel Excellence Scholarship for top applicants.",
+     "Humanities and sciences across the Latin Quarter, with partial exemptions common for non-EU students."),
+    ("Sciences Po", "Paris", "France", 242, 0.20, 13000, 13800, 8400, 7.0, 1350, True, 3.6, ENG,
+     ["Political Science", "International Relations", "Economics", "Law", "Sociology"], "27 February", 48.8546, 2.3290,
+     "Needs-based tuition: fees scale with family income, and can reach zero.",
+     "France's school for politics and public affairs. Income-scaled fees make it cheaper than the sticker price."),
+    ("École Polytechnique", "Palaiseau", "France", 38, 0.12, 13000, 10800, 6000, 7.0, 1450, True, 3.8, ENG,
+     ["Mathematics", "Physics", "Computer Science", "Economics", "Data Science"], "10 January", 48.7139, 2.2085,
+     "Bachelor scholarships cover 60–100% of tuition for high-scoring applicants.",
+     "Highly selective grande école with a mathematics-first bachelor taught entirely in English."),
+    ("Grenoble Alpes University", "Grenoble", "France", 301, 0.62, 3770, 9000, 4800, 6.0, None, False, 2.8, ENG_LOCAL,
+     TECH + LIFE + ["Environmental Science"], "30 April", 45.1926, 5.7688,
+     "IDEX scholarships of €5,000–€10,000 per year for international bachelor students.",
+     "Research campus in the Alps, strong in physics, computing and environmental science."),
+
+    ("Bocconi University", "Milan", "Italy", 134, 0.32, 16000, 12000, 7200, 7.0, 1350, True, 3.5, ENG,
+     BIZ + ["Economics", "Data Science", "Political Science"], "4 January", 45.4477, 9.1888,
+     "Merit awards fully waive tuition for the top of the applicant pool; need-based aid is income-tested.",
+     "Italy's leading business and economics school, with a strong graduate placement record."),
+    ("Politecnico di Milano", "Milan", "Italy", 111, 0.48, 3900, 11400, 6600, 6.0, None, False, 3.0, ENG,
+     TECH + DESIGN, "15 December", 45.4785, 9.2270,
+     "Income-based fee bands mean many international students pay well under the maximum.",
+     "Top-ranked in design and architecture in Europe, and strong across engineering."),
+    ("University of Bologna", "Bologna", "Italy", 154, 0.55, 3000, 9000, 5400, 6.0, None, False, 2.8, ENG_LOCAL,
+     GEN + BIZ + ["Genomics", "International Studies"], "31 March", 44.4966, 11.3548,
+     "Unibo Action 1 & 2 study grants: €11,000 plus tuition waiver.",
+     "The oldest university in continuous operation, with a growing set of English-taught degrees."),
+    ("Sapienza University of Rome", "Rome", "Italy", 132, 0.60, 2800, 10200, 6000, 6.0, None, False, 2.7, ENG_LOCAL,
+     GEN + LIFE + ["Classics", "Engineering"], "30 June", 41.9030, 12.5160,
+     "Fees are ISEE income-banded; low-income international students can pay the minimum.",
+     "One of Europe's largest universities by enrolment, in the centre of Rome."),
+    ("Politecnico di Torino", "Turin", "Italy", 252, 0.58, 3500, 9600, 5400, 6.0, None, False, 2.8, ENG,
+     TECH + ["Automotive Engineering", "Cinema and Media Engineering"], "31 January", 45.0625, 7.6623,
+     "TOPoliTO merit scholarships waive fees and add a €6,000 stipend.",
+     "Engineering school with a long-standing automotive specialism and English-taught tracks."),
+
+    ("IE University", "Madrid", "Spain", 314, 0.45, 24000, 13200, 9000, 7.0, 1300, False, 3.4, ENG,
+     BIZ + ["International Relations", "Data and Business Analytics", "Design"], "Rolling", 40.4290, -3.6900,
+     "Merit scholarships of 15–100% of tuition, assessed at application.",
+     "Private, entirely English-taught, with the highest fees on this list but generous merit aid."),
+    ("University of Barcelona", "Barcelona", "Spain", 164, 0.55, 5000, 10800, 6600, 6.5, None, False, 2.9, ENG_LOCAL,
+     GEN + LIFE + ["Economics", "Biotechnology"], "15 June", 41.3867, 2.1640,
+     "Fee reductions for high-performing students; regional grants for non-EU applicants are limited.",
+     "Spain's highest-ranked public university, mostly teaching in Catalan and Spanish at bachelor level."),
+    ("Carlos III University of Madrid", "Madrid", "Spain", 340, 0.50, 8000, 10200, 6000, 6.5, None, False, 3.0, ENG,
+     BIZ + TECH + ["International Studies"], "31 May", 40.3320, -3.7660,
+     "Excellence scholarships covering 50–100% of tuition for strong entry grades.",
+     "Public university with a large English-taught bilingual programme, strong in economics and engineering."),
+
+    ("Trinity College Dublin", "Dublin", "Ireland", 81, 0.35, 20000, 13800, 9600, 6.5, 1250, False, 3.4, ENG,
+     GEN + TECH + BIZ, "1 February", 53.3438, -6.2546,
+     "Global Excellence Scholarships of €5,000–€10,000 per year.",
+     "Ireland's oldest university, in the middle of Dublin, entirely English-taught."),
+    ("University College Dublin", "Dublin", "Ireland", 171, 0.45, 19000, 13200, 9000, 6.5, None, False, 3.2, ENG,
+     BIZ + LIFE + TECH, "1 February", 53.3065, -6.2255,
+     "UCD Global Excellence Scholarship: up to 100% of tuition for exceptional applicants.",
+     "Large parkland campus outside the city centre, with a broad international intake."),
+
+    ("University of Warsaw", "Warsaw", "Poland", 262, 0.60, 3000, 6600, 3600, 6.0, None, False, 2.7, ENG_LOCAL,
+     GEN + BIZ + ["Computer Science", "International Relations"], "8 July", 52.2404, 21.0169,
+     "Tuition waivers for high-achieving international students; living costs are among Europe's lowest.",
+     "Poland's leading university, with English-taught tracks in economics, IR and computing."),
+    ("AGH University of Science and Technology", "Kraków", "Poland", 801, 0.65, 3000, 6000, 3200, 6.0, None, False, 2.6, ENG,
+     TECH + ["Automatic Control", "Geoinformatics"], "15 July", 50.0647, 19.9231,
+     "Low flat fees for non-EU students; no separate application fee.",
+     "Technical university in Kraków with English-taught engineering and computing degrees."),
+    ("Jagiellonian University", "Kraków", "Poland", 371, 0.58, 4000, 6200, 3400, 6.0, None, False, 2.8, ENG_LOCAL,
+     GEN + LIFE + ["Medicine"], "30 June", 50.0614, 19.9330,
+     "Partial fee waivers for students with strong secondary results.",
+     "Founded in 1364; the English-taught medical programme draws students from across Europe."),
+
+    ("Charles University", "Prague", "Czech Republic", 248, 0.55, 5000, 7200, 4200, 6.5, None, False, 2.9, ENG_LOCAL,
+     GEN + LIFE + ["Medicine", "Computer Science"], "28 February", 50.0880, 14.4160,
+     "Czech-taught programmes are free of tuition for everyone, including international students.",
+     "Study in Czech and pay nothing; study in English and pay a moderate fee."),
+    ("Czech Technical University in Prague", "Prague", "Czech Republic", 498, 0.62, 4500, 7000, 4000, 6.0, None, False, 2.7, ENG,
+     TECH + DESIGN, "31 March", 50.1027, 14.3920,
+     "No tuition for Czech-taught study; English programmes charge a flat annual fee.",
+     "Engineering and architecture, with a well-regarded computer science faculty."),
+
+    ("Budapest University of Technology and Economics", "Budapest", "Hungary", 801, 0.65, 4000, 6000, 3200, 6.0, None, False, 2.6, ENG,
+     TECH + ["Architecture", "Transportation Engineering"], "31 May", 47.4813, 19.0559,
+     "Stipendium Hungaricum covers tuition, accommodation and a monthly allowance.",
+     "Hungary's main technical university, with a long-running English-taught engineering track."),
+    ("Eötvös Loránd University", "Budapest", "Hungary", 651, 0.60, 4500, 6200, 3400, 6.0, None, False, 2.7, ENG_LOCAL,
+     GEN + LIFE + ["Computer Science", "Psychology"], "31 May", 47.4735, 19.0620,
+     "Stipendium Hungaricum and partial tuition waivers.",
+     "Broad research university with English-taught programmes in science and social science."),
+
+    ("University of Porto", "Porto", "Portugal", 295, 0.55, 7000, 7800, 4200, 6.0, None, False, 2.8, ENG_LOCAL,
+     TECH + LIFE + DESIGN, "31 July", 41.1780, -8.5980,
+     "Merit scholarships for international students; Porto is cheap to live in by western European standards.",
+     "Portugal's largest university, with a strong engineering faculty and low living costs."),
+    ("University of Lisbon", "Lisbon", "Portugal", 356, 0.52, 7000, 9000, 5400, 6.0, None, False, 2.8, ENG_LOCAL,
+     TECH + GEN + LIFE, "31 July", 38.7368, -9.1395,
+     "Instituto Superior Técnico offers merit awards for international entrants.",
+     "Includes Instituto Superior Técnico, the country's leading engineering school."),
+    ("NOVA University Lisbon", "Lisbon", "Portugal", 414, 0.55, 7000, 9000, 5400, 6.5, None, False, 2.9, ENG,
+     BIZ + TECH + ["Economics"], "30 June", 38.7330, -9.1600,
+     "NOVA SBE merit scholarships for economics and management applicants.",
+     "Modern campus with English-taught economics and management on a seafront site."),
+
+    ("TU Wien", "Vienna", "Austria", 192, 0.55, 1500, 10800, 6000, 6.5, None, False, 3.0, ENG_LOCAL,
+     TECH + DESIGN, "5 September", 48.1989, 16.3699,
+     "Non-EU tuition is €726.72 per semester — among the lowest in western Europe.",
+     "Technical university in central Vienna; very low fees for a high-income city."),
+    ("University of Vienna", "Vienna", "Austria", 130, 0.58, 1500, 10800, 6000, 6.5, None, False, 2.9, ENG_LOCAL,
+     GEN + LIFE + ["Business Administration"], "5 September", 48.2130, 16.3600,
+     "Low flat fees plus performance grants for international students.",
+     "Austria's largest university, with bachelor teaching mainly in German."),
+
+    ("ETH Zurich", "Zurich", "Switzerland", 7, 0.27, 1600, 21600, 12000, 7.0, 1400, False, 3.7, ENG_LOCAL,
+     TECH + LIFE + ["Physics", "Mathematics"], "15 December", 47.3763, 8.5476,
+     "Tuition is nominal; the Excellence Scholarship covers living costs for top applicants.",
+     "Europe's strongest technical university. Fees are tiny, but Zurich living costs are the highest here."),
+    ("EPFL", "Lausanne", "Switzerland", 26, 0.30, 1460, 19200, 10800, 6.5, 1350, False, 3.6, ENG_LOCAL,
+     TECH + ["Life Sciences Engineering", "Microengineering"], "15 January", 46.5191, 6.5668,
+     "Excellence Fellowships for masters; bachelor fees are low but living costs are not.",
+     "Lakeside campus with a dominant computer science and robotics faculty."),
+
+    ("KTH Royal Institute of Technology", "Stockholm", "Sweden", 73, 0.40, 16000, 12000, 7200, 6.5, None, False, 3.2, ENG,
+     TECH + ["Industrial Engineering"], "15 January", 59.3498, 18.0700,
+     "KTH Scholarship covers full tuition for non-EU students; the Swedish Institute funds living costs.",
+     "Sweden's largest technical university, entirely English-taught at masters level."),
+    ("Lund University", "Lund", "Sweden", 85, 0.45, 14000, 10800, 6600, 6.5, None, False, 3.1, ENG,
+     GEN + LIFE + TECH, "15 January", 55.7118, 13.2070,
+     "Lund Global Scholarship covers 25–100% of tuition.",
+     "A traditional university town twenty minutes from Copenhagen."),
+    ("Uppsala University", "Uppsala", "Sweden", 105, 0.48, 13000, 10200, 6000, 6.5, None, False, 3.0, ENG,
+     LIFE + GEN + ["Data Science"], "15 January", 59.8586, 17.6389,
+     "Uppsala University Global Scholarship covers tuition in full for a small number of students.",
+     "Scandinavia's oldest university, with strong life sciences."),
+
+    ("Technical University of Denmark", "Lyngby", "Denmark", 104, 0.42, 15000, 13200, 8400, 6.5, None, False, 3.2, ENG,
+     TECH + ["Sustainable Energy", "Biotechnology"], "15 January", 55.7861, 12.5233,
+     "Danish Government Scholarships cover tuition plus a living stipend for a few non-EU students.",
+     "Engineering-only campus north of Copenhagen, with heavy industry collaboration."),
+    ("University of Copenhagen", "Copenhagen", "Denmark", 107, 0.45, 14000, 13800, 8400, 6.5, None, False, 3.1, ENG_LOCAL,
+     LIFE + GEN + ["Economics"], "15 January", 55.6802, 12.5720,
+     "Free for EU/EEA students; non-EU pay tuition with limited scholarship places.",
+     "Denmark's flagship university, especially strong in health and natural sciences."),
+
+    ("Aalto University", "Espoo", "Finland", 114, 0.45, 15000, 10800, 6000, 6.5, None, False, 3.1, ENG,
+     TECH + BIZ + DESIGN, "18 January", 60.1849, 24.8260,
+     "Aalto scholarships waive 50–100% of tuition for non-EU students.",
+     "Technology, business and design merged into one campus — unusual and well executed."),
+    ("University of Helsinki", "Helsinki", "Finland", 106, 0.48, 13000, 11400, 6600, 6.5, None, False, 3.0, ENG_LOCAL,
+     LIFE + GEN + ["Computer Science"], "18 January", 60.1699, 24.9500,
+     "Finland Scholarship covers first-year tuition plus a €5,000 relocation grant.",
+     "Broad research university; most bachelor teaching is in Finnish or Swedish."),
+
+    ("Norwegian University of Science and Technology", "Trondheim", "Norway", 292, 0.50, 12000, 13200, 7800, 6.5, None, False, 3.0, ENG_LOCAL,
+     TECH + LIFE, "1 December", 63.4190, 10.4020,
+     "Norway introduced tuition for non-EEA students in 2023; Quota Scheme places are limited.",
+     "Norway's engineering university, with a strong marine and energy focus."),
+    ("University of Oslo", "Oslo", "Norway", 117, 0.52, 12000, 14400, 8400, 6.5, None, False, 3.0, ENG_LOCAL,
+     GEN + LIFE + ["Informatics"], "1 December", 59.9400, 10.7220,
+     "Non-EEA tuition applies; some faculties offer partial waivers.",
+     "Norway's oldest university, with English-taught masters across the sciences."),
+
+    ("KU Leuven", "Leuven", "Belgium", 61, 0.50, 6000, 9600, 5400, 6.5, None, False, 3.1, ENG_LOCAL,
+     TECH + LIFE + GEN, "1 March", 50.8778, 4.7005,
+     "Science@Leuven scholarships for non-EEA students, partly covering fees and living costs.",
+     "Belgium's leading research university, in a compact student town near Brussels."),
+    ("Ghent University", "Ghent", "Belgium", 143, 0.55, 6000, 9000, 5200, 6.5, None, False, 3.0, ENG_LOCAL,
+     LIFE + TECH + ["Bioscience Engineering"], "1 March", 51.0470, 3.7270,
+     "Top-up grants for students from developing countries; fees are flat and low.",
+     "Strong in bioscience and veterinary medicine, with growing English-taught provision."),
+
+    ("University of Tartu", "Tartu", "Estonia", 358, 0.62, 5000, 5400, 3000, 6.0, None, False, 2.7, ENG,
+     TECH + GEN + LIFE, "15 April", 58.3810, 26.7210,
+     "Tuition waivers plus a €400/month stipend for the strongest applicants.",
+     "The Baltics' leading university, with English-taught computer science and a low cost of living."),
+    ("Tallinn University of Technology", "Tallinn", "Estonia", 651, 0.68, 6000, 6000, 3400, 6.0, None, False, 2.6, ENG,
+     TECH + ["Cybersecurity", "E-Governance"], "1 April", 59.3950, 24.6720,
+     "Performance-based tuition waivers reviewed each semester.",
+     "Estonia's technical university, known for cybersecurity and digital government programmes."),
+    ("Riga Technical University", "Riga", "Latvia", 801, 0.70, 4000, 5400, 2800, 6.0, None, False, 2.5, ENG,
+     TECH + DESIGN, "15 July", 56.9500, 24.1180,
+     "Low flat fees; state scholarships available after the first year.",
+     "Latvia's engineering university, with English-taught bachelor programmes and low fees."),
+    ("Vilnius University", "Vilnius", "Lithuania", 801, 0.66, 4500, 5800, 3000, 6.0, None, False, 2.6, ENG_LOCAL,
+     GEN + LIFE + ["Software Engineering"], "31 July", 54.6830, 25.2880,
+     "State scholarships for international students; fees are among the lowest in the EU.",
+     "The oldest university in the Baltics, with a growing English-taught catalogue."),
+
+    ("University of Bucharest", "Bucharest", "Romania", 801, 0.70, 3000, 5400, 2800, 6.0, None, False, 2.5, ENG_LOCAL,
+     GEN + LIFE + ["Computer Science"], "20 July", 44.4355, 26.1010,
+     "Romanian government scholarships cover tuition and accommodation for selected applicants.",
+     "Romania's largest university; very low fees and living costs."),
+    ("Babeș-Bolyai University", "Cluj-Napoca", "Romania", 1001, 0.72, 3000, 5200, 2600, 6.0, None, False, 2.5, ENG_LOCAL,
+     BIZ + GEN + ["Computer Science"], "25 July", 46.7670, 23.5900,
+     "Fee exemptions for students with strong baccalaureate results.",
+     "Multilingual university in Transylvania, with English and Hungarian-taught tracks."),
+    ("National and Kapodistrian University of Athens", "Athens", "Greece", 401, 0.60, 6000, 7200, 4000, 6.5, None, False, 2.8, ENG_LOCAL,
+     GEN + LIFE + ["Archaeology"], "31 May", 37.9680, 23.7830,
+     "English-taught programmes charge tuition; Greek-taught study is free.",
+     "Greece's oldest university, with a handful of English-taught degrees."),
+
+    ("University of Manchester", "Manchester", "United Kingdom", 34, 0.56, 28000, 13200, 8400, 6.5, 1290, False, 3.3, ENG,
+     TECH + LIFE + BIZ, "29 January", 53.4668, -2.2339,
+     "Global Futures Scholarship: £5,000 per year for international undergraduates.",
+     "A large civic university with one of the UK's biggest international intakes."),
+    ("University of Edinburgh", "Edinburgh", "United Kingdom", 27, 0.40, 29000, 13800, 9000, 6.5, 1290, False, 3.4, ENG,
+     GEN + TECH + LIFE, "29 January", 55.9445, -3.1892,
+     "Edinburgh Global Undergraduate Scholarship: £5,000 per year, needs-assessed.",
+     "Historic campus woven through the old town, strong in informatics and medicine."),
+    ("University of Warwick", "Coventry", "United Kingdom", 69, 0.45, 31000, 12000, 8400, 6.5, 1300, False, 3.4, ENG,
+     BIZ + TECH + ["Economics", "Mathematics"], "29 January", 52.3838, -1.5616,
+     "Warwick Undergraduate Global Excellence Scholarship covers part of tuition.",
+     "Self-contained campus university with a dominant economics and mathematics reputation."),
+    ("University of Glasgow", "Glasgow", "United Kingdom", 78, 0.55, 27000, 12600, 8000, 6.5, None, False, 3.2, ENG,
+     GEN + LIFE + TECH, "29 January", 55.8721, -4.2882,
+     "Undergraduate Excellence Scholarship of £5,000 per year for international students.",
+     "One of the UK's oldest universities, on a gothic campus in the west end of the city."),
+]
+
+
+def build() -> list[dict]:
+    out = []
+    for r in ROWS:
+        (name, city, country, rank, accept, tuition, living, housing, ielts, sat, sat_req,
+         gpa, language, majors, deadline, lat, lng, scholarship, description) = r
+        out.append({
+            "name": name,
+            "city": city,
+            "country": country,
+            "ranking_world": rank,
+            "acceptance_rate": accept,
+            "tuition_min_eur": tuition,
+            "tuition_max_eur": tuition,
+            "living_cost_eur": living,
+            "housing_cost_eur": housing,
+            "application_fee_eur": 0 if country in {"Germany", "Czech Republic"} else 60,
+            "min_ielts": ielts,
+            "min_sat": sat,
+            "sat_required": sat_req,
+            "min_gpa": gpa,
+            "language_of_instruction": language,
+            "majors": majors,
+            "application_deadline": deadline,
+            "latitude": lat,
+            "longitude": lng,
+            "has_housing": True,
+            "scholarship_notes": scholarship,
+            "description": description,
+            "website": "",
+        })
+    return out
+
+
+if __name__ == "__main__":
+    target = Path(__file__).resolve().parent.parent / "backend/api/data/seed_universities.json"
+    target.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "_note": (
+            "Approximate demo data so the app runs before the real database is loaded. "
+            "Figures are indicative annual costs in EUR for international students and should "
+            "be replaced via `python manage.py import_universities`."
+        ),
+        "universities": build(),
+    }
+    target.write_text(json.dumps(payload, indent=1, ensure_ascii=False), encoding="utf-8")
+    print(f"Wrote {len(payload['universities'])} universities to {target}")
