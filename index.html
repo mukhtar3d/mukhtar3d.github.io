@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ventorme: профессия и вузы за 3 минуты, бесплатно</title>
+<meta name="description" content="Бесплатный тест Ventorme за 3 минуты покажет подходящую профессию, вузы с реальными шансами и что подтянуть. Регистрация занимает около 3 минут: email, код из письма, 4 коротких вопроса.">
+<meta name="theme-color" content="#3B47FF">
+<meta property="og:title" content="Ventorme: профессия и вузы за 3 минуты, бесплатно">
+<meta property="og:description" content="Бесплатный тест Ventorme покажет подходящие профессии и вузы, куда реально поступить. Регистрация занимает около 3 минут.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://ventorme.ai/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%233B47FF'/%3E%3Cpath d='M9 9.5l7 12 7-12' fill='none' stroke='%23E0FF00' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --blue:#3B47FF; --blue-deep:#2A33D6; --lime:#E0FF00;
+  --ink:#0F1226; --bg-soft:#F7F8FC; --white:#FFFFFF;
+  --muted:#4A4F6E;
+  --radius-xl:40px; --radius-lg:28px; --radius-md:20px; --pill:999px;
+  --font:"Manrope","Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  background:var(--bg-soft); color:var(--ink);
+  font-family:var(--font);
+  font-size:17px; line-height:1.55; -webkit-text-size-adjust:100%;
+  overflow-x:hidden;
+}
+.hero{position:relative;isolation:isolate}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;pointer-events:none;
+  background:url("hero-bg.png") center center/cover no-repeat;
+  opacity:.10;mix-blend-mode:luminosity;
+}
+h1,h2,h3{font-weight:800;letter-spacing:-.03em;line-height:1.02}
+h1{font-size:clamp(44px,7vw,78px)}
+h2{font-size:clamp(30px,4.2vw,46px);line-height:1.05}
+h3{font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.02em}
+a{color:var(--blue-deep);text-underline-offset:3px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px;border-radius:6px}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{position:fixed;left:16px;top:-64px;z-index:400;background:var(--ink);color:#fff;padding:11px 18px;border-radius:14px;text-decoration:none;font-size:15px;font-weight:600}
+.skip-link:focus{top:16px}
+
+/* ---------- buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  min-height:54px;padding:14px 28px;border-radius:var(--pill);border:1px solid transparent;
+  font:inherit;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer;
+  transition:transform .25s ease,background-color .25s ease,border-color .25s ease,box-shadow .25s ease;
+}
+.btn:hover{transform:translateY(-4px)}
+.btn:active{transform:translateY(0)}
+.btn-lime{background:var(--lime);color:var(--ink)}
+.btn-lime:hover{box-shadow:0 12px 30px rgba(224,255,0,.35)}
+.btn-ghost{background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(255,255,255,.12));color:#fff;border-color:rgba(255,255,255,.55)}
+.glass{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(255,255,255,.12));
+  backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.2),0 20px 50px rgba(30,40,200,.25);
+  border-radius:var(--radius-lg);
+}
+.glass::before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(120deg,rgba(255,255,255,.5),rgba(255,255,255,0) 40%);
+  opacity:.5;border-radius:inherit;
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .glass{background:rgba(255,255,255,.85)}
+}
+.card-hover{transition:transform .25s ease,backdrop-filter .25s ease,background-color .25s ease}
+.card-hover:hover{transform:translateY(-4px)}
+
+/* ---------- reveal ---------- */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:translateY(0)}
+
+/* ---------- header ---------- */
+.site-header{position:fixed;top:16px;left:0;right:0;z-index:100;display:flex;justify-content:center;padding:0 16px;pointer-events:none}
+.nav-pill{
+  pointer-events:auto;width:100%;max-width:900px;
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:10px 10px 10px 18px;
+}
+.brand{display:inline-flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:18px;letter-spacing:-.02em}
+.nav-links{display:flex;gap:6px}
+.nav-links a{
+  color:#fff;text-decoration:none;font-size:15px;font-weight:600;
+  padding:10px 16px;border-radius:var(--pill);min-height:44px;display:inline-flex;align-items:center;
+  transition:background-color .25s ease;
+}
+.nav-links a:hover{background:rgba(255,255,255,.16)}
+.nav-cta{flex:none;border:none;font-weight:800}
+.site-header .btn{min-height:48px;padding:10px 22px}
+
+/* ---------- hero ---------- */
+.hero{position:relative;background:var(--blue);color:#fff;padding:150px 0 90px;overflow:hidden}
+.blob{position:absolute;pointer-events:none;z-index:0;animation:drift 26s ease-in-out infinite alternate}
+.blob.b1{top:-140px;left:-120px;width:560px;opacity:.35;animation-duration:24s}
+.blob.b2{bottom:-180px;right:-140px;width:640px;opacity:.35;animation-duration:30s;animation-delay:-8s}
+.blob.b3{top:30%;right:22%;width:420px;opacity:.28;animation-duration:21s;animation-delay:-4s}
+@keyframes drift{from{transform:translate3d(0,0,0) rotate(0deg)}to{transform:translate3d(40px,26px,0) rotate(6deg)}}
+.orb{position:absolute;border-radius:50%;filter:blur(46px);pointer-events:none;z-index:0}
+.orb.lime{background:var(--lime);opacity:.5;width:230px;height:230px}
+.orb.white{background:#fff;opacity:.55;width:170px;height:170px}
+.orb.o1{top:60px;right:34%}
+.orb.o2{bottom:120px;right:6%;width:200px;height:200px}
+.orb.o3{top:38%;right:24%;width:120px;height:120px;opacity:.4}
+.hero .wrap{position:relative;z-index:1;display:grid;grid-template-columns:55fr 45fr;gap:56px;align-items:start}
+.hero h1 em{font-style:normal;color:var(--lime)}
+.hero-sub{margin-top:20px;font-size:19px;color:rgba(255,255,255,.95);max-width:48ch;font-weight:500}
+.hero-oneliner{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.chip{
+  display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:8px 16px;
+  border-radius:var(--pill);border:1px solid rgba(255,255,255,.55);
+  background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(255,255,255,.12));
+  backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);
+  font-size:14px;font-weight:700;color:#fff;
+}
+.chip .dot{width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}
+.hero-note{margin-top:18px;font-size:14px;color:rgba(255,255,255,.9);max-width:44ch}
+.hero-note strong{color:#fff}
+
+/* hero card (redesign) */
+.visual{position:relative;max-width:560px;width:100%;justify-self:end;align-self:center;padding:20px 0 22px;line-height:normal}
+.visual .halo{position:absolute;width:340px;height:340px;right:6%;top:0;border-radius:50%;background:rgba(224,255,0,.3);filter:blur(80px);pointer-events:none}
+.result-card{position:relative;padding:36px 38px 30px;border:1px solid rgba(255,255,255,.72);border-radius:36px;background:linear-gradient(145deg,rgba(255,255,255,.92),rgba(237,240,255,.82));box-shadow:0 30px 80px rgba(18,24,133,.3),inset 0 1px 0 #fff;color:var(--ink);overflow:visible}
+.card-top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-right:70px}
+.card-kicker{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.11em;color:#646ef0}
+.card-count{font-size:13px;color:#7a7f98;font-weight:700}
+.rc-tags{display:flex;gap:9px;margin-top:20px}
+.rc-tag{display:inline-flex;align-items:center;padding:9px 14px;border-radius:99px;background:#15182e;color:var(--lime);font-size:13px;font-weight:800}
+.rc-tag.blue{background:var(--blue);color:#fff}
+.result-card .rc-title{font-size:32px;line-height:1.15;letter-spacing:-.04em;font-weight:800;margin:22px 0 8px;color:var(--ink)}
+.card-desc{font-size:15px;color:#71768e;margin:0 0 14px}
+.career{display:flex;align-items:center;gap:16px;padding:20px 0;border-top:1px solid rgba(59,71,255,.12)}
+.career-icon{width:54px;height:54px;display:grid;place-items:center;flex:none;border-radius:18px;background:#eaecff;color:var(--blue);font-size:23px}
+.career-name{font-size:18px;font-weight:800;letter-spacing:-.01em}
+.career-sub{font-size:13px;color:#737992;margin-top:4px}
+.meter{margin-left:auto;flex:none;min-width:68px;padding:10px 13px;border-radius:99px;background:var(--lime);font-size:16px;font-weight:800;text-align:center;font-variant-numeric:tabular-nums}
+.card-foot{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-top:14px;padding-top:24px;border-top:1px solid rgba(59,71,255,.12)}
+.card-foot p{max-width:180px;}
+.card-foot .btn{min-height:54px;padding:0 20px;font-size:14px;white-space:nowrap;background:var(--blue);color:#fff;box-shadow:0 10px 24px rgba(59,71,255,.28)}
+.mascot{position:absolute;right:-26px;top:-34px;width:118px;height:118px;display:grid;place-items:center;z-index:2;filter:drop-shadow(0 12px 12px rgba(24,30,130,.2))}
+.mascot svg{width:100%;height:100%}
+.float-note{position:absolute;left:-5px;bottom:-24px;padding:15px 20px;border-radius:20px;background:#fff;box-shadow:0 16px 44px rgba(18,24,133,.24);color:var(--ink);display:flex;align-items:center;gap:13px;transform:rotate(-3deg)}
+.float-check{width:40px;height:40px;border-radius:14px;background:var(--lime);display:grid;place-items:center;font-weight:900;font-size:18px}
+.float-note strong{display:block;font-size:14px}
+.float-note small{display:block;color:#7a7f96;font-size:12px;margin-top:3px}
+
+/* ---------- pricing ---------- */
+.pricing{padding:0 0 70px}
+.billing-toggle{display:flex;justify-content:center;margin:28px 0 8px}
+.bt-group{display:inline-flex;background:var(--white);border:1px solid rgba(59,71,255,.12);border-radius:var(--pill);padding:4px}
+.bt-group button{
+  border:none;background:transparent;cursor:pointer;font:inherit;font-size:15px;font-weight:700;
+  color:var(--muted);padding:9px 22px;min-height:44px;border-radius:var(--pill);
+  transition:background-color .25s ease,color .25s ease;
+}
+.bt-group button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.price-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px;align-items:stretch}
+.pcard{background:var(--white);border-radius:var(--radius-xl);padding:34px 30px 30px;display:flex;flex-direction:column;border:1px solid rgba(59,71,255,.08);position:relative}
+.pcard{color:var(--ink)}
+.pcard.plus{background:var(--blue);color:#fff;border-color:transparent;overflow:hidden}
+.pcard.plus .p-sub{color:rgba(255,255,255,.9)}
+.pcard.plus .feat li{color:#fff}
+.pcard.plus .feat .ok{background:var(--lime)}
+.pcard.plus .feat .ok svg path{stroke:var(--ink)}
+.pcard h3{font-size:26px}
+.pcard .p-name{color:var(--blue)}
+.pcard.plus .p-name{color:#fff}
+.p-sub{color:var(--muted);font-size:15px;margin-top:4px}
+.feat{list-style:none;margin:24px 0 26px;display:grid;gap:14px}
+.feat li{display:flex;align-items:flex-start;gap:12px;font-weight:600;font-size:15.5px;color:var(--ink)}
+.pcard.plus .feat li{color:#fff}
+.feat .ok{width:24px;height:24px;flex:none;border-radius:50%;background:var(--lime);display:grid;place-items:center;margin-top:1px}
+.pcard .choose{margin-top:auto;min-height:54px;width:100%;border-radius:var(--pill);background:var(--blue);color:#fff;font-weight:800;border:1px solid transparent;display:inline-flex;align-items:center;justify-content:center;text-decoration:none;font-size:16px;transition:transform .25s ease,filter .25s ease}
+.pcard .choose:hover{transform:translateY(-4px);filter:brightness(1.06)}
+.badge-top{position:absolute;top:-18px;left:50%;translate:-50% 0;background:var(--lime);color:var(--ink);font-weight:800;font-size:14px;padding:9px 18px;border-radius:var(--pill);box-shadow:0 8px 20px rgba(224,255,0,.35);white-space:nowrap;z-index:2}
+.price-box{margin-top:26px;border-radius:var(--radius-md);padding:20px 22px;background:var(--bg-soft);border:1px solid rgba(59,71,255,.08)}
+.pcard.plus .price-box{background:rgba(255,255,255,.14);border-color:rgba(255,255,255,.25)}
+.price-num{font-size:26px;font-weight:800;letter-spacing:-.02em;color:var(--ink)}
+.pcard.plus .price-num{color:#fff}
+.price-per{font-size:15px;font-weight:600;color:var(--muted)}
+.pcard.plus .price-per{color:rgba(255,255,255,.85)}
+.price-note{font-size:13px;color:var(--muted);margin-top:6px}
+.pcard.plus .price-note{color:rgba(255,255,255,.85)}
+.free-price{font-size:22px}
+@media (max-width:950px){
+  .price-grid{grid-template-columns:1fr}
+}
+
+/* ---------- prep (pink) ---------- */
+.prep{padding:0 0 70px}
+.prep-inner{border-radius:var(--radius-xl);background:#F6438C;color:#fff;padding:56px 40px 64px}
+.prep-inner h2{font-size:clamp(30px,4.5vw,52px)}
+.prep-inner h2 em{font-style:normal;color:var(--lime)}
+.prep-inner .prep-sub{margin-top:14px;font-size:18px;font-weight:600;color:rgba(255,255,255,.97);max-width:64ch}
+.prep-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:40px}
+.pcell{background:var(--white);border-radius:var(--radius-lg);padding:26px 24px 24px;color:var(--ink);display:flex;flex-direction:column;gap:18px}
+.pcell h3{color:var(--blue);font-size:21px;line-height:1.2}
+.ptasks{display:grid;gap:10px}
+.ptask{display:flex;align-items:center;justify-content:space-between;gap:10px;border:1px solid rgba(59,71,255,.12);border-radius:12px;padding:10px 12px;font-size:14px;font-weight:600}
+.ptask .cbx{width:18px;height:18px;border:2px solid var(--blue);border-radius:5px;flex:none}
+.ptask .xp{color:#B8860B;font-weight:800;font-size:13px;white-space:nowrap}
+.pmock{background:var(--bg-soft);border-radius:14px;padding:14px;text-align:center}
+.pmock .pm-t{font-size:13.5px;font-weight:700}
+.pmock .pm-s{font-size:12px;color:var(--muted);margin-top:3px}
+.pscore{margin-top:10px;display:inline-flex;align-items:center;gap:8px;background:#fff;border-radius:12px;padding:8px 14px;border:1px solid rgba(59,71,255,.12)}
+.pscore .pv{font-weight:800;color:#1DB954;font-size:15px}
+.pstats{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.pstat{border-radius:12px;padding:12px 10px;font-size:14px}
+.pstat .pn{font-weight:800;font-size:18px}
+.pstat .pl{font-size:12px;color:var(--muted);margin-top:2px}
+.pstat.b{background:#EDEFFF}
+.pstat.y{background:#FDF7DC}
+@media (max-width:900px){
+  .prep-grid{grid-template-columns:1fr}
+}
+
+/* ---------- marquee ---------- */
+.unis{padding:70px 0 20px}
+.unis h2{text-align:center;font-size:clamp(22px,3vw,30px)}
+.unis .sub{text-align:center;color:var(--muted);margin-top:8px}
+.marquee{
+  margin-top:28px;overflow:hidden;padding:6px 0;
+  -webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+  mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);
+}
+.marquee-track{display:flex;gap:48px;width:max-content;animation:scroll-l 32s linear infinite}
+.marquee.reverse .marquee-track{animation-name:scroll-r;animation-duration:38s}
+.marquee:hover .marquee-track{animation-play-state:paused}
+.uname{
+  color:#8B90A9;font-weight:800;font-size:22px;letter-spacing:-.02em;white-space:nowrap;
+  display:inline-flex;align-items:center;gap:48px;
+}
+.uname svg{opacity:.35}
+@keyframes scroll-l{to{transform:translateX(-50%)}}
+@keyframes scroll-r{from{transform:translateX(-50%)}to{transform:translateX(0)}}
+
+/* ---------- blue steps container ---------- */
+.how{padding:70px 0}
+.blue-container{
+  position:relative;overflow:hidden;border-radius:var(--radius-xl);
+  background:var(--blue);color:#fff;padding:64px 40px 0;
+}
+.blue-container .blob{opacity:.35;filter:url(#liquid)}
+.blue-container .blob.c1{top:-110px;left:-90px;width:420px}
+.blue-container .blob.c2{bottom:-120px;right:-100px;width:480px;animation-delay:-10s}
+.bc-head{position:relative;z-index:1;text-align:center;max-width:640px;margin:0 auto 40px}
+.bc-head p{margin-top:12px;color:rgba(255,255,255,.92);font-weight:500}
+.cards3{position:relative;z-index:1;display:grid;grid-template-columns:repeat(3,1fr);gap:20px;padding-bottom:0}
+.wcard{
+  padding:26px 24px 0;color:var(--ink);min-height:300px;display:flex;flex-direction:column;
+}
+.wcard .step-n{color:var(--blue-deep);font-weight:800;font-size:14px;letter-spacing:.06em}
+.wcard h3{margin-top:8px}
+.wcard .txt{margin-top:8px;color:var(--muted);font-size:15.5px}
+.mock{margin-top:auto;padding:18px 0 0;margin-bottom:-14px}
+.progress{height:12px;border-radius:var(--pill);background:rgba(59,71,255,.15);overflow:hidden;margin-bottom:6px}
+.progress i{display:block;height:100%;width:64%;border-radius:var(--pill);background:var(--blue)}
+.progress.lime i{background:var(--lime);width:42%}
+.mock-label{font-size:12px;color:var(--muted);font-weight:600}
+.chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:8px}
+.chips span{background:rgba(59,71,255,.1);color:var(--blue-deep);border-radius:var(--pill);padding:6px 12px;font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+.chips span b{color:var(--blue)}
+.editor{border:1px solid rgba(59,71,255,.15);border-radius:14px 14px 0 0;background:#fff;padding:14px}
+.editor .ln{height:9px;border-radius:6px;background:rgba(15,18,38,.08);margin-bottom:8px}
+.editor .ln.w1{width:78%}
+.editor .ln.w2{width:56%}
+.editor .ln.w3{width:36%;background:var(--lime);opacity:.7}
+
+/* ---------- bento ---------- */
+.bento{padding:20px 0 70px}
+.section-label{font-size:14px;font-weight:700;color:var(--blue-deep);letter-spacing:.04em;margin-bottom:10px}
+.bento-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:28px}
+.bcard{background:var(--white);border-radius:var(--radius-lg);padding:32px 30px 0;overflow:hidden;min-height:280px;display:flex;flex-direction:column;border:1px solid rgba(59,71,255,.08)}
+.bcard p{margin-top:10px;color:var(--muted);font-size:16px;max-width:46ch}
+.bento-mock{margin-top:auto;padding-top:24px;transform:translateY(16px)}
+.sch{
+  background:var(--bg-soft);border:1px solid rgba(59,71,255,.12);border-radius:18px 18px 0 0;
+  padding:18px 20px 22px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+}
+.sch .sch-icon{width:44px;height:44px;border-radius:14px;background:rgba(59,71,255,.1);display:grid;place-items:center;flex:none}
+.sch .sch-name{font-weight:700;font-size:15.5px}
+.sch .sch-sub{font-size:13px;color:var(--muted)}
+.match{margin-left:auto;flex:none;background:#1DB954;color:#fff;font-weight:800;font-size:13px;border-radius:var(--pill);padding:7px 12px;font-variant-numeric:tabular-nums}
+.dlist{list-style:none;background:var(--bg-soft);border:1px solid rgba(59,71,255,.12);border-radius:18px 18px 0 0;padding:14px 20px 22px}
+.dlist li{display:flex;align-items:center;gap:10px;padding:8px 0;font-size:15px;font-weight:600}
+.dlist .ok{width:22px;height:22px;flex:none;border-radius:50%;background:var(--lime);display:grid;place-items:center}
+.dlist .todo{width:22px;height:22px;flex:none;border-radius:50%;border:2px solid rgba(59,71,255,.3)}
+.mini-note{font-size:12px;color:#8B90A9;margin-top:8px;text-align:center}
+
+/* ---------- faq ---------- */
+.faq{padding:0 0 70px}
+.faq-list{max-width:760px;margin-top:28px}
+.faq details{background:var(--white);border-radius:var(--radius-md);border:1px solid rgba(59,71,255,.08);margin-bottom:12px;overflow:hidden}
+.faq summary{
+  display:flex;align-items:center;justify-content:space-between;gap:16px;
+  padding:18px 22px;min-height:44px;cursor:pointer;font-size:17px;font-weight:700;list-style:none;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{
+  content:"";width:10px;height:10px;flex:none;
+  border-right:2.5px solid var(--blue);border-bottom:2.5px solid var(--blue);
+  transform:rotate(45deg);transition:transform .25s ease;
+}
+.faq details[open] summary::after{transform:rotate(-135deg)}
+.faq details p{color:var(--muted);padding:0 22px 20px;max-width:60ch}
+
+/* ---------- final ---------- */
+.final{padding:0 0 80px}
+.final-inner{
+  position:relative;overflow:hidden;border-radius:var(--radius-xl);
+  background:var(--blue);color:#fff;padding:64px 40px;
+  display:grid;gap:12px;justify-items:start;
+}
+.final h2{color:#fff}
+.final h2 em{font-style:normal;color:var(--lime)}
+.final p{color:rgba(255,255,255,.95);max-width:52ch;font-weight:500}
+.final .btn{margin-top:12px;background:var(--lime);color:var(--ink)}
+
+/* ---------- footer ---------- */
+.site-footer{border-top:1px solid rgba(59,71,255,.1);padding:48px 0 40px}
+.footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:32px}
+.site-footer h3{font-size:13px;font-weight:700;color:#8B90A9;letter-spacing:.06em;text-transform:uppercase;margin-bottom:12px}
+.site-footer ul{list-style:none}
+.site-footer li{margin-bottom:8px;font-size:15px}
+.site-footer address{font-style:normal}
+.site-footer address ul{margin:0}
+.captain{color:var(--muted)}
+.legal{margin-top:44px;padding-top:20px;border-top:1px solid rgba(59,71,255,.08);font-size:14px;color:var(--muted);max-width:74ch}
+.legal p{margin-bottom:8px}
+
+/* ---------- cookies section ---------- */
+.cookies{padding:0 0 60px}
+.cookies h2{font-size:clamp(24px,3vw,32px)}
+.cookies p{color:var(--muted);margin-top:12px;max-width:62ch}
+
+/* ---------- cookie banner ---------- */
+.cookiebar{
+  position:fixed;left:50%;translate:-50% 0;bottom:16px;z-index:120;
+  width:calc(100% - 24px);max-width:820px;
+  display:flex;align-items:center;gap:16px;
+  background:linear-gradient(135deg,rgba(255,255,255,.45),rgba(255,255,255,.12));
+  backdrop-filter:blur(22px) saturate(180%);-webkit-backdrop-filter:blur(22px) saturate(180%);
+  border:1px solid rgba(255,255,255,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.9),inset 0 -1px 0 rgba(255,255,255,.2),0 20px 50px rgba(30,40,200,.25);
+  border-radius:var(--radius-lg);padding:14px 18px;color:var(--ink);font-size:14.5px;
+}
+.cookiebar[hidden]{display:none}
+.cookie-icon{flex:none;width:40px;height:40px;border-radius:14px;background:rgba(59,71,255,.12);display:grid;place-items:center}
+.cookiebar .txt{flex:1;min-width:0}
+.cookiebar .txt a{color:var(--blue-deep);font-weight:700}
+.cookiebar-btns{display:flex;gap:10px;flex:none}
+.cookiebar-grey{background:rgba(15,18,38,.08);color:var(--ink);border-color:transparent}
+.cookiebar-grey:hover{background:rgba(15,18,38,.14)}
+.cookiebar-blue{background:var(--blue);color:#fff}
+.cookiebar-blue:hover{background:var(--blue-deep)}
+@media (max-width:640px){
+  .cookiebar{flex-wrap:wrap}
+  .cookiebar-btns{width:100%}
+  .cookiebar-btns .btn{flex:1 1 0;min-height:48px;padding:10px 16px}
+}
+
+/* ---------- whatsapp ---------- */
+.wa{
+  position:fixed;right:16px;bottom:88px;z-index:110;
+  width:60px;height:60px;border-radius:50%;background:#25D366;
+  display:grid;place-items:center;border:1px solid rgba(255,255,255,.55);
+  box-shadow:0 14px 34px rgba(18,140,60,.4);
+  transition:transform .25s ease;
+}
+.wa:hover{transform:translateY(-4px)}
+@media (max-width:640px){
+  .wa{bottom:96px}
+}
+
+/* ---------- responsive ---------- */
+@media (max-width:1100px){
+  .visual{justify-self:center}
+  .hero .wrap{grid-template-columns:1fr;gap:48px}
+  .cards3{grid-template-columns:1fr 1fr}
+  .cards3 .wcard:last-child{grid-column:1/-1}
+}
+@media (max-width:768px){
+  .float-note{left:-10px;bottom:30px}
+  html{scroll-padding-top:84px}
+  .hero{padding:112px 0 80px}
+  .blue-container{padding:44px 22px 0}
+  .cards3{grid-template-columns:1fr}
+  .cards3 .wcard:last-child{grid-column:auto}
+  .bento-grid{grid-template-columns:1fr}
+  .bcard{min-height:auto}
+  .nav-links{display:none}
+  .nav-pill{padding:8px 8px 8px 14px}
+  .bento-mock{transform:none;padding-top:18px}
+  .sch,.dlist{border-radius:14px}
+  .final-inner{padding:40px 24px}
+  .prep-inner{padding:40px 24px 48px}
+}
+@media (max-width:520px){
+  .mascot{right:-7px;top:-26px;width:76px;height:76px}
+  .result-card{padding:21px 17px;border-radius:24px}
+  .result-card .rc-title{font-size:20px}
+  .career{gap:9px}.career-icon{width:34px;height:34px}.career-name{font-size:12px}
+  .meter{min-width:48px;padding:7px 8px}
+  .card-foot{align-items:flex-start;flex-direction:column}.card-foot p{max-width:none}.card-foot .btn{width:100%}
+  .float-note{left:-5px;bottom:6px;padding:9px 11px}.float-note strong{font-size:10px}
+  .hero h1{font-size:clamp(38px,10.5vw,46px)}
+  .site-header .btn{min-height:44px;padding:9px 16px}
+  .uname{font-size:18px;gap:32px}
+}
+
+/* ---------- reduced motion ---------- */
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .marquee{overflow-x:auto}
+  .reveal{opacity:1;transform:none}
+}
+</style>
+</head>
+<body id="top">
+<a class="skip-link" href="#main">К основному содержанию</a>
+
+<!-- liquid distortion filter (blobs only) -->
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <filter id="liquid" x="-20%" y="-20%" width="140%" height="140%">
+    <feTurbulence type="fractalNoise" baseFrequency="0.012 0.02" numOctaves="2" seed="7" result="noise"/>
+    <feDisplacementMap in="SourceGraphic" in2="noise" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+  </filter>
+  <symbol id="grad-cap" viewBox="0 0 24 24"><path d="M12 3 2 8l10 5 10-5-10-5Zm-6 8.2V16c0 1.7 2.9 3 6 3s6-1.3 6-3v-4.8l-6 3-6-3Z" fill="currentColor"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M6 12.5l4 4L18 8" fill="none" stroke="#0F1226" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</svg>
+
+<header class="site-header">
+  <nav class="nav-pill glass" aria-label="Главная навигация">
+    <a class="brand" href="#top" aria-label="Ventorme, наверх этой страницы">
+      <svg width="30" height="30" viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+        <rect width="32" height="32" rx="9" fill="#fff"/>
+        <path d="M9 9.5l7 12 7-12" fill="none" stroke="#3B47FF" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Ventorme
+    </a>
+    <div class="nav-links">
+      <a href="#how">Как это работает</a>
+      <a href="#benefits">Что это даёт</a>
+      <a href="#faq">Вопросы</a>
+    </div>
+    <a class="btn btn-lime nav-cta cta" href="https://ventorme.ai/register?utm_source=hacknext&amp;utm_campaign=team-149" data-cta>Регистрация</a>
+  </nav>
+</header>
+
+<main id="main">
+
+<!-- ================= HERO ================= -->
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"></div>
+  <svg class="blob b1" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="filter:url(#liquid)">
+    <path fill="#5661ff" d="M46 60c30-38 68-40 102-18s22 64-6 92-78 34-100 4S16 98 46 60Z"/>
+  </svg>
+  <svg class="blob b2" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="filter:url(#liquid)">
+    <path fill="#2A33D6" d="M40 80C60 34 118 24 152 56s26 84-10 108-92 20-112-16S24 118 40 80Z"/>
+  </svg>
+  <svg class="blob b3" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="filter:url(#liquid)">
+    <path fill="#7d86ff" d="M60 40c36-18 84-6 96 30s-10 74-52 78-70-24-66-56c3-25 3-38 22-52Z"/>
+  </svg>
+  <div class="orb lime o1" aria-hidden="true"></div>
+  <div class="orb white o2" aria-hidden="true"></div>
+  <div class="orb white o3" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <div>
+      <h1>Узнай свою профессию и <em>вузы с реальными шансами</em> за 3 минуты</h1>
+      <p class="hero-sub">Бесплатный тест Ventorme: пара вопросов о тебе, и на экране список направлений и университетов, куда возможно поступить.</p>
+      <p class="hero-oneliner">
+        <span class="chip"><span class="dot" aria-hidden="true"></span>Бесплатно</span>
+        <span class="chip"><span class="dot" aria-hidden="true"></span>Около 3 минут</span>
+        <span class="chip"><span class="dot" aria-hidden="true"></span>1 кнопка, без звонков и оплаты</span>
+      </p>
+      <div class="hero-ctas">
+        <a class="btn btn-lime cta" href="https://ventorme.ai/register?utm_source=hacknext&amp;utm_campaign=team-149" data-cta>Пройти тест бесплатно</a>
+        <a class="btn btn-ghost" href="#how">Как это работает</a>
+      </div>
+    </div>
+
+    <div class="visual" aria-label="Пример персонального результата">
+      <div class="halo"></div>
+      <div class="mascot" aria-hidden="true">
+        <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="50" cy="89" rx="29" ry="6" fill="#1B248E" opacity=".13"/>
+          <path d="M18 43C18 24 31 14 50 14S82 24 82 43V59C82 76 68 84 50 84S18 76 18 59V43Z" fill="white" stroke="#11142B" stroke-width="4"/>
+          <path d="M27 20L49 7L73 20L66 28L50 19L34 28L27 20Z" fill="#E0FF00" stroke="#11142B" stroke-width="4" stroke-linejoin="round"/>
+          <circle cx="39" cy="47" r="4.3" fill="#11142B"/><circle cx="61" cy="47" r="4.3" fill="#11142B"/>
+          <path d="M41 61C45 66 55 66 59 61" stroke="#11142B" stroke-width="4" stroke-linecap="round"/>
+          <path d="M39 69H61" stroke="#3B47FF" stroke-width="3.5" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <article class="result-card">
+        <div class="card-top"><span class="card-kicker">Пример результата</span><span class="card-count">01 / 03</span></div>
+        <div class="rc-tags"><span class="rc-tag">3 минуты</span><span class="rc-tag blue">Бесплатно</span></div>
+        <h3 class="rc-title">Тебе могут подойти</h3>
+        <p class="card-desc">Пример направлений по итогам теста</p>
+        <div class="career"><span class="career-icon" aria-hidden="true">⌘</span><div><div class="career-name">IT-аналитика</div><div class="career-sub">Логика · данные · решения</div></div><span class="meter">92%</span></div>
+        <div class="career"><span class="career-icon" aria-hidden="true">✳</span><div><div class="career-name">UX/UI-дизайн</div><div class="career-sub">Исследования · интерфейсы</div></div><span class="meter">84%</span></div>
+        <div class="career"><span class="career-icon" aria-hidden="true">⌁</span><div><div class="career-name">Инженерия</div><div class="career-sub">Системы · проектирование</div></div><span class="meter">76%</span></div>
+        <div class="card-foot"><p>Это демонстрационный пример, а не результат реального теста.</p><a class="btn cta" href="https://ventorme.ai/register?utm_source=hacknext&amp;utm_campaign=team-149" data-cta>Узнать свой результат →</a></div>
+      </article>
+      <div class="float-note" aria-hidden="true"><span class="float-check">✓</span><span><strong>Понятно, с чего начать</strong><small>Профессии и вузы в одном месте</small></span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= UNIVERSITY MARQUEE ================= -->
+<section class="unis reveal" aria-labelledby="unis-h">
+  <div class="wrap">
+    <h2 id="unis-h">Наши студенты поступают в</h2>
+    <p class="sub">База из тысячи вузов, это лишь часть названий.</p>
+  </div>
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>MIT</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Oxford</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Stanford</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>ETH Zürich</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>University of Toronto</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Curtin University</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>MIT</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Oxford</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Stanford</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>ETH Zürich</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>University of Toronto</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Curtin University</span>
+    </div>
+  </div>
+  <div class="marquee reverse" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>KAIST</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>TU Delft</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>NUS</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>KTH Stockholm</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Arizona State</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Cambridge</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>KAIST</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>TU Delft</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>NUS</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>KTH Stockholm</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Arizona State</span>
+      <span class="uname"><svg width="18" height="18"><use href="#grad-cap"/></svg>Cambridge</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW: BLUE CONTAINER ================= -->
+<section class="how" id="how" aria-labelledby="how-h">
+  <div class="wrap">
+    <div class="blue-container reveal">
+      <svg class="blob c1" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="filter:url(#liquid)">
+        <path fill="#5661ff" d="M46 60c30-38 68-40 102-18s22 64-6 92-78 34-100 4S16 98 46 60Z"/>
+      </svg>
+      <svg class="blob c2" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="filter:url(#liquid)">
+        <path fill="#2A33D6" d="M40 80C60 34 118 24 152 56s26 84-10 108-92 20-112-16S24 118 40 80Z"/>
+      </svg>
+      <div class="bc-head">
+        <h2 id="how-h" style="color:#fff">Всё, что нужно для поступления</h2>
+        <p>Три шага, и у тебя есть план. После регистрации нужен код из письма, и это только второй шаг.</p>
+      </div>
+      <div class="cards3">
+        <div class="wcard glass card-hover reveal">
+          <span class="step-n">01 · Регистрация</span>
+          <h3>Регистрируешься, это займёт около 3 минут</h3>
+          <p class="txt">От подбора специальности до подписанного оффера</p>
+          <div class="mock" aria-hidden="true">
+            <div class="progress"><i></i></div>
+            <div class="mock-label">Регистрация на 64%</div>
+          </div>
+        </div>
+        <div class="wcard glass card-hover reveal">
+          <span class="step-n">02 · Тест</span>
+          <h3>Получаешь профессии и вузы</h3>
+          <p class="txt">Список направлений, которые совпадают с твоим профилем, по шансам поступления, а не наугад.</p>
+          <div class="mock" aria-hidden="true">
+            <div class="chips">
+              <span>IT <b>92%</b></span>
+              <span>Дизайн <b>84%</b></span>
+              <span>Инженерия <b>76%</b></span>
+            </div>
+            <div class="mock-label">Подбор по твоим ответам · пример</div>
+          </div>
+        </div>
+        <div class="wcard glass card-hover reveal">
+          <span class="step-n">03 · План</span>
+          <h3>Дальше подготовка по плану</h3>
+          <p class="txt">IELTS, SAT, эссе и дедлайны проходят в одном месте, шаг за шагом. Первые результаты сразу и бесплатно.</p>
+          <div class="mock" aria-hidden="true">
+            <div class="editor">
+              <div class="ln w1"></div>
+              <div class="ln w2"></div>
+              <div class="ln w3"></div>
+            </div>
+            <div class="mock-label">Черновик эссе в редакторе · пример</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BENTO ================= -->
+<section class="bento" id="benefits" aria-labelledby="benefits-h">
+  <div class="wrap">
+    <p class="section-label">Что это даёт</p>
+    <h2 id="benefits-h">Бесплатно, по-настоящему и уже сегодня</h2>
+    <div class="bento-grid">
+      <div class="bcard card-hover reveal">
+        <h3>Взгляд на шансы заранее</h3>
+        <p>Ventorme по твоим оценкам и уровню английского честно покажет, какие вузы сейчас достижимы, а какие станут целью на полгода вперёд.</p>
+        <div class="bento-mock" aria-hidden="true">
+          <div class="sch">
+            <span class="sch-icon"><svg width="22" height="22"><use href="#grad-cap"/></svg></span>
+            <span>
+              <span class="sch-name">Стипендия на обучение</span>
+              <span class="sch-sub">Университет · грант · пример карточки</span>
+            </span>
+            <span class="match">95% Match</span>
+          </div>
+        </div>
+      </div>
+      <div class="bcard card-hover reveal">
+        <h3>Планировать, а не собирать по крохам</h3>
+        <p>Вместо переписки в чатах и десяти вкладок у тебя один список: какие экзамены сдавать и когда спланировать дедлайны.</p>
+        <div class="bento-mock" aria-hidden="true">
+          <ul class="dlist">
+            <li><span class="ok"><svg width="12" height="12"><use href="#i-check"/></svg></span>Career-тест пройден</li>
+            <li><span class="ok"><svg width="12" height="12"><use href="#i-check"/></svg></span>Список вузов получен</li>
+            <li><span class="todo" aria-hidden="true"></span>IELTS по плану</li>
+          </ul>
+          <p class="mini-note">Пример экрана прогресса</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pricing" id="pricing" aria-labelledby="pricing-h">
+  <div class="wrap">
+    <p class="section-label reveal">Тарифы</p>
+    <h2 id="pricing-h" class="reveal">Начни бесплатно, расти с Плюсом</h2>
+    <div class="billing-toggle reveal">
+      <div class="bt-group" role="group" aria-label="Период оплаты">
+        <button type="button" id="bt-month" aria-pressed="true">1 месяц</button>
+        <button type="button" id="bt-year" aria-pressed="false">12 месяцев</button>
+      </div>
+    </div>
+    <div class="price-grid">
+      <article class="pcard reveal" aria-labelledby="free-h">
+        <h3 id="free-h"><span class="p-name">Free</span></h3>
+        <p class="p-sub">Попробовать платформу</p>
+        <ul class="feat">
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Мини-тест на профессию</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Проверка уровня IELTS</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Проверка уровня SAT</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Настройка портфолио</li>
+        </ul>
+        <div class="price-box">
+          <p class="price-num">Free</p>
+          <p class="price-note">Без карты и подписки</p>
+          <a class="btn cta" data-login href="https://ventorme.ai/login?utm_source=hacknext&amp;utm_campaign=team-149">Start free</a>
+        </div>
+      </article>
+      <article class="pcard plus reveal" aria-labelledby="plus-h">
+        <h3 id="plus-h"><span class="p-name">Plus</span></h3>
+        <p class="p-sub">Полное сопровождение поступления</p>
+        <ul class="feat">
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>AI-тест на профессии: что тебе подходит</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>AI Match: вузы по баллам и бюджету</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Пошаговый план поступления с дедлайнами</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Подготовка к каждому экзамену: пробники и геймификация</li>
+          <li><span class="ok"><svg width="13" height="13"><use href="#i-check"/></svg></span>Помощь с эссе и заявками</li>
+        </ul>
+        <div class="price-box">
+          <p><span class="price-num" id="plus-price">29 900 ₸</span> <span class="price-per" id="plus-per">/ в месяц</span></p>
+          <p class="price-note" id="plus-note">Вернём первый платёж при переходе на год</p>
+          <a class="btn choose cta" data-login href="https://ventorme.ai/login?utm_source=hacknext&amp;utm_campaign=team-149">Выбрать Plus</a>
+        </div>
+      </article>
+    </div>
+    <p class="mini-note reveal">Оплата проходит на ventorme.ai после входа в аккаунт.</p>
+  </div>
+</section>
+
+<!-- ================= PREP (PINK) ================= -->
+<section class="prep" id="prep" aria-labelledby="prep-h">
+  <div class="wrap">
+    <div class="prep-inner reveal">
+      <h2 id="prep-h"><em>Персональный</em> план подготовки</h2>
+      <p class="prep-sub">Тренажёры по всем секциям IELTS и SAT, пробники в реальных условиях и разбор ошибок</p>
+      <div class="prep-grid">
+        <div class="pcell">
+          <h3>Ежедневные задачи</h3>
+          <div class="ptasks" aria-hidden="true">
+            <div class="ptask"><span class="cbx"></span>10 вопросов по математике<span class="xp">+20 XP</span></div>
+            <div class="ptask"><span class="cbx"></span>Мини-тест Reading<span class="xp">+25 XP</span></div>
+            <div class="ptask"><span class="cbx"></span>Разбор ошибок пробника<span class="xp">+35 XP</span></div>
+          </div>
+        </div>
+        <div class="pcell">
+          <h3>Пробные тесты<br>с таймером</h3>
+          <div class="pmock" aria-hidden="true">
+            <p class="pm-t">Пробные тесты в реальных условиях</p>
+            <p class="pm-s">Полная пробная по таймеру, как на настоящем экзамене</p>
+            <div class="pscore"><span>Твой score</span><span class="pv">1560</span></div>
+          </div>
+        </div>
+        <div class="pcell">
+          <h3>Дашборд роста результатов</h3>
+          <div class="pstats" aria-hidden="true">
+            <div class="pstat b"><span class="pn">124</span><span class="pl">Прогноз балла</span></div>
+            <div class="pstat y"><span class="pn">6 баллов</span><span class="pl">Осталось до цели</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="faq" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <p class="section-label">Вопросы</p>
+    <h2 id="faq-h">Короткие ответы</h2>
+    <div class="faq-list">
+      <details class="reveal">
+        <summary>Что будет после регистрации?</summary>
+        <p>Сразу откроется бесплатный тест из четырёх вопросов, а после него список профессий и вузов. Платные функции для этого не нужны.</p>
+      </details>
+      <details class="reveal">
+        <summary>А если оценки не идеальные?</summary>
+        <p>Это нормально. Тест смотрит на весь профиль, а не только на оценки. Ventorme покажет вузы, куда поступить реально сейчас, и отдельно подскажет, что подтянуть, чтобы расширить список.</p>
+      </details>
+      <details class="reveal">
+        <summary>Безопасны ли мои данные?</summary>
+        <p>На этой странице формы нет: она ничего никуда не отправляет и ничего не хранит о тебе. Регистрация происходит на ventorme.ai с его политикой конфиденциальности.</p>
+      </details>
+      <details class="reveal">
+        <summary>Это правда бесплатно?</summary>
+        <p>Да. Тест, профессии и подборка вузов бесплатны сразу после регистрации. Платная подготовка IELTS и SAT нужна, только если захочешь продолжить.</p>
+      </details>
+      <details class="reveal">
+        <summary>Что входит в Plus и сколько это стоит?</summary>
+        <p>Plus — это AI-подбор вузов по баллам и бюджету, план поступления с дедлайнами, подготовка к экзаменам и помощь с эссе. Точная цена отображается на ventorme.ai после входа; первый месяц можно вернуть при переходе на годовой план.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL ================= -->
+<section class="final" id="final" aria-labelledby="final-h">
+  <div class="wrap">
+    <div class="final-inner reveal">
+      <svg class="blob" viewBox="0 0 200 200" aria-hidden="true" focusable="false" style="top:-90px;right:-80px;width:340px;opacity:.35;filter:url(#liquid)">
+        <path fill="#5661ff" d="M46 60c30-38 68-40 102-18s22 64-6 92-78 34-100 4S16 98 46 60Z"/>
+      </svg>
+      <svg class="orb lime" viewBox="0 0 100 100" style="top:30px;right:18%;width:150px;height:150px;opacity:.4" aria-hidden="true"></svg>
+      <p class="section-label" style="color:var(--lime)">Осталось 3 минуты</p>
+      <h2 id="final-h">Узнай свою профессию и <em>вузы</em>, это бесплатно</h2>
+      <p>Регистрация на ventorme.ai: email, код из письма, четыре коротких вопроса. Держи почту открытой.</p>
+      <a class="btn cta" href="https://ventorme.ai/register?utm_source=hacknext&amp;utm_campaign=team-149" data-cta>Пройти тест бесплатно</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer" id="footer-contacts">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <h3>Команда</h3>
+        <address id="contacts-list"></address>
+      </div>
+      <nav aria-label="Разделы страницы">
+        <h3>На странице</h3>
+        <ul>
+          <li><a href="#how">Как это работает</a></li>
+          <li><a href="#benefits">Что это даёт</a></li>
+          <li><a href="#pricing">Тарифы</a></li>
+          <li><a href="#prep">Подготовка</a></li>
+          <li><a href="#faq">Вопросы</a></li>
+          <li><a href="#cookies">Cookie и данные</a></li>
+        </ul>
+      </nav>
+      <nav aria-label="Ventorme">
+        <h3>Ventorme</h3>
+        <ul><li><a href="https://ventorme.ai/" rel="noopener">ventorme.ai</a></li></ul>
+      </nav>
+    </div>
+    <div class="legal">
+      <p>© 2026 <span id="team-name-out"></span>. Студенческий проект HACKNEXT x Ventorme. Название и логотип Ventorme принадлежат их владельцам. Эта страница создана командой и не является официальным сайтом Ventorme; регистрация проходит на <a href="https://ventorme.ai/" rel="noopener">ventorme.ai</a>.</p>
+    </div>
+  </div>
+
+  <section class="cookies" id="cookies" aria-labelledby="cookies-h" style="padding-top:44px">
+    <div class="wrap" style="max-width:780px">
+      <h2 id="cookies-h">Cookie и данные</h2>
+      <p>На этой странице <b>нет форм</b> и <b>нет cookie</b>: она ничего не хранит и никуда ничего не отправляет. Регистрация проходит на <a href="https://ventorme.ai/" rel="noopener">ventorme.ai</a>, там свои условия и <a href="https://ventorme.ai/" rel="noopener">политика конфиденциальности</a>. Чтобы полностью убрать следы этой страницы, очисти данные сайта в настройках браузера.</p>
+    </div>
+  </section>
+</footer>
+
+<!-- ================= COOKIE BAR ================= -->
+<div class="cookiebar" id="cookiebar" hidden role="region" aria-label="Про cookie">
+  <span class="cookie-icon" aria-hidden="true">
+    <svg width="22" height="22" viewBox="0 0 24 24"><path d="M21 12.2A9 9 0 1 1 11.8 3a3.2 3.2 0 0 0 3.6 4.2A3.2 3.2 0 0 0 21 12.2Z" fill="none" stroke="#3B47FF" stroke-width="2" stroke-linejoin="round"/><circle cx="9" cy="10" r="1.3" fill="#3B47FF"/><circle cx="13" cy="15" r="1.3" fill="#3B47FF"/><circle cx="7.5" cy="14.5" r="1" fill="#3B47FF"/></svg>
+  </span>
+  <p class="txt" id="cookie-text">Аналитика тут не подключается: страница ничего о тебе не хранит и не отправляет. Дальше действует <a href="#cookies">политика ventorme.ai</a>.</p>
+  <div class="cookiebar-btns">
+    <a class="btn cookiebar-grey" href="#cookies">Политика cookie</a>
+    <button type="button" class="btn cookiebar-blue" id="cb-accept">Принять</button>
+  </div>
+</div>
+
+<!-- ================= WHATSAPP ================= -->
+<a class="wa" id="wa-btn" href="#footer-contacts" aria-label="Написать нам в WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+    <path fill="#fff" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2Zm5.5 14.1c-.2.6-1.2 1.2-1.7 1.2-.4.1-1 .1-1.6-.1-2.6-.9-4.3-2.5-5.6-4.9-.4-.7-.8-1.6-.8-2.4 0-.8.4-1.5.8-1.8.2-.2.4-.3.6-.3h.5c.2 0 .4 0 .6.4l.8 1.9c.1.2 0 .4-.1.6l-.5.6c-.1.2-.2.3-.1.5.5.9 1.9 2.3 3.2 2.9.2.1.4.1.6-.1l.7-.8c.2-.2.3-.2.5-.2l2 .9c.2.1.5.2.5.4.1.3.1.6-.4.2Z"/>
+  </svg>
+</a>
+
+<script>
+/* ================= CONFIG ================= */
+const CONFIG = { TEAM_NUMBER: "149", TEAM_NAME: "Hakuti", EMAIL: "elekenovarausan@gmail.com", TELEGRAM: "", INSTAGRAM: "", CAPTAIN: "Aisana_no", METRIKA_ID: "", WHATSAPP: "" };
+/* ========================================== */
+
+/* ---------- CTA + login URLs ---------- */
+(function buildCtas(){
+  const incomplete = !CONFIG.TEAM_NUMBER || CONFIG.TEAM_NUMBER === "149";
+  const regUrl = "https://ventorme.ai/register?utm_source=hacknext&utm_campaign=team-" + encodeURIComponent(CONFIG.TEAM_NUMBER);
+  const loginUrl = "https://ventorme.ai/login?utm_source=hacknext&utm_campaign=team-" + encodeURIComponent(CONFIG.TEAM_NUMBER);
+  document.querySelectorAll("a.cta").forEach(a => { a.href = regUrl; });
+  document.querySelectorAll("[data-login]").forEach(a => { a.href = loginUrl; });
+  document.getElementById("team-name-out").textContent = CONFIG.TEAM_NAME || "команда HACKNEXT";
+  if (incomplete) console.warn("CONFIG: TEAM_NUMBER не заполнен. Замените реальным номером команды, чтобы ссылки CTA и кнопки оплаты вели в нужный аккаунт.");
+})();
+
+/* ---------- Pricing billing toggle ---------- */
+(function billing(){
+  const bm = document.getElementById("bt-month"), by = document.getElementById("bt-year");
+  const priceEl = document.getElementById("plus-price"), perEl = document.getElementById("plus-per"), noteEl = document.getElementById("plus-note");
+  if(!bm || !by) return;
+  const MONTHLY = "29 900 ₸";
+  const set = (yearly) => {
+    bm.setAttribute("aria-pressed", String(!yearly));
+    by.setAttribute("aria-pressed", String(yearly));
+    if (yearly){
+      priceEl.textContent = "299 000 ₸";
+      perEl.textContent = "/ в год";
+      noteEl.textContent = "Эквивалент 24 917 ₸ в месяц — выгода 17%";
+    } else {
+      priceEl.textContent = MONTHLY;
+      perEl.textContent = "/ в месяц";
+      noteEl.textContent = "Вернём первый платёж при переходе на год";
+    }
+  };
+  bm.addEventListener("click", () => set(false));
+  by.addEventListener("click", () => set(true));
+})();
+
+/* ---------- Contacts from CONFIG ---------- */
+(function buildContacts(){
+  const c = [];
+  const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/"/g,"&quot;");
+  const mk = (href, label, rel) => '<li><a href="' + esc(href) + '"' + (rel ? ' rel="' + rel + '"' : '') + '>' + esc(label) + '</a></li>';
+  if (CONFIG.EMAIL) c.push(mk("mailto:" + CONFIG.EMAIL, CONFIG.EMAIL));
+  if (CONFIG.TELEGRAM) c.push(mk("https://t.me/" + CONFIG.TELEGRAM, "Telegram · @" + CONFIG.TELEGRAM, "noopener"));
+  if (CONFIG.INSTAGRAM) c.push(mk("https://instagram.com/" + CONFIG.INSTAGRAM, "Instagram · @" + CONFIG.INSTAGRAM, "noopener"));
+  if (CONFIG.CAPTAIN) c.push('<li><span class="captain">Капитан: ' + esc(CONFIG.CAPTAIN) + '</span></li>');
+  c.push(mk("https://ventorme.ai/", "ventorme.ai", "noopener"));
+  document.getElementById("contacts-list").innerHTML = "<ul>" + c.join("") + "</ul>";
+})();
+
+/* ---------- WhatsApp ---------- */
+(function whatsapp(){
+  const btn = document.getElementById("wa-btn");
+  if (CONFIG.WHATSAPP){
+    btn.href = "https://wa.me/" + CONFIG.WHATSAPP.replace(/[^0-9]/g, "");
+  }
+})();
+
+/* ---------- Cookie bar (no storage) ---------- */
+(function cookieBar(){
+  const bar = document.getElementById("cookiebar");
+  bar.hidden = false;
+  document.getElementById("cb-accept").addEventListener("click", () => {
+    bar.hidden = true;
+    if (CONFIG.METRIKA_ID) location.reload();
+  });
+})();
+
+/* ---------- Optional Yandex Metrika: only after «Принять» ---------- */
+(function metrika(){
+  if (!CONFIG.METRIKA_ID) return;
+  const s = document.createElement("script");
+  s.async = true;
+  s.onload = () => {
+    if (typeof ym === "function") ym(CONFIG.METRIKA_ID, "init", { defer: true, accurateTrackBounce: true });
+  };
+  s.src = "https://mc.yandex.ru/metrika/tag.js";
+  document.head.appendChild(s);
+})();
+
+/* ---------- Reveal on scroll ---------- */
+(function reveal(){
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const items = document.querySelectorAll(".reveal");
+  if (reduce || !("IntersectionObserver" in window)){
+    items.forEach(el => el.classList.add("in"));
+    return;
+  }
+  let i = 0;
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting){
+        e.target.style.transitionDelay = (i % 4) * 80 + "ms";
+        i = (i + 1) % 4;
+        e.target.classList.add("in");
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  items.forEach(el => io.observe(el));
+})();
+</script>
+</body>
+</html>
