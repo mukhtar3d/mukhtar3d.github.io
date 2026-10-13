@@ -454,6 +454,8 @@ img,svg{display:block;max-width:100%}
       <a href="#how">Как это работает</a>
       <a href="#benefits">Что это даёт</a>
       <a href="#faq">Вопросы</a>
+      <a href="#pricing">Тарифы</a>  
+      <a href="#prep">План</a>  
     </div>
     <a class="btn btn-lime nav-cta cta" href="https://ventorme.ai/register?utm_source=hacknext&amp;utm_campaign=team-149" data-cta>Регистрация</a>
   </nav>
@@ -491,7 +493,6 @@ img,svg{display:block;max-width:100%}
         <a class="btn btn-ghost" href="#how">Как это работает</a>
       </div>
     </div>
-
     <div class="visual" aria-label="Пример персонального результата">
       <div class="halo"></div>
       <div class="mascot" aria-hidden="true">
